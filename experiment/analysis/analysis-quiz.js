@@ -89,47 +89,38 @@
 
 
      const myQuestions = [{
-            question: "1. Sample question1", ///// Write the question inside double quotes
+            question: "1. 32 teams qualified for the 2014 World Cup. If the names of the teams were arranged in sorted order (an array), how many items in the array would binary search have to examine to find the location of a particular team in the array, in the worst case?", ///// Write the question inside double quotes
             answers: {
-                a: "1", ///// Write the option 1 inside double quotes
-                b: "2", ///// Write the option 2 inside double quotes
-                c: "3", ///// Write the option 2 inside double quotes
-                d: "4", ///// Write the option 2 inside double quotes
+                a: "At most, 1.", ///// Write the option 1 inside double quotes
+                b: "At most, 16.", ///// Write the option 2 inside double quotes
+                c: "At most, 6. ", ///// Write the option 2 inside double quotes
+                d: "At most, 32.", ///// Write the option 2 inside double quotes
             },
-            correctAnswer: "b" ///// Write the correct option inside double quotes
+            correctAnswer: "c" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "2. Sample question2",  ///// Write the question inside double quotes
+      question: "2. What is lg(32), the base-2 logarithm of 32?",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "5",                  ///// Write the option 1 inside double quotes
+        b: "32",                  ///// Write the option 2 inside double quotes
+	c: "16", ///// Write the option 3 inside double quotes
+        d: "1", ///// Write the option 4 inside double quotes
              },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
 
 {
-      question: "3. Sample question3",  ///// Write the question inside double quotes
+      question: "3. You have an array containing the prime numbers from 2 to 311 in sorted order: [2, 3, 5, 7, 11, 13, ..., 307, 311]. There are 64 items in the array. About how many items of the array would binary search have to examine before concluding that 52 is not in the array, and therefore not prime?",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "7",                  ///// Write the option 1 inside double quotes
+        b: "128",                  ///// Write the option 2 inside double quotes
+	c: "22", ///// Write the option 3 inside double quotes
+        d: "1", ///// Write the option 4 inside double quotes
              },
-      correctAnswer: "d"                ///// Write the correct option inside double quotes
+      correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
-{
-      question: "4. Sample question4",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-             },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
+
 
      ];
 

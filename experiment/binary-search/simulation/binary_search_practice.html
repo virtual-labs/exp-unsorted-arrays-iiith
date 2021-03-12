@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary Search Practice</title>
+    <link rel="stylesheet" href="css/linearSearch.css">
+    <link rel="stylesheet" href="https://ds1-iiith.vlabs.ac.in/exp-common-css/common-styles.css">
+  </head>
+  <body onload="randomise();">
+     <div class="instruction-box">
+       <button class="collapsible">Instructions</button>
+       <div class="content">
+         <ul>
+           <li>Enter the Binary Search order for searching the given query element given.</li>
+           <li>Enter the order in terms of the indices of the elements of the array.</li>
+           <li>Seperate the indices with commas. Eg. 4, 3, 2, 1</li>
+           <li>Submit your answer and click Try Again for another question.</li>
+         </ul>
+       </div>
+     </div>
+     
+     <div id="wrapper">
+        <div id="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+        
+        <div id="legend-comment-wrapper">
+           <ul class="legend">
+             <li><span class="green"></span> Current Element</li>
+             <li><span class="black"></span> Element Found</li>
+             <li><span class="red"></span> Element Not Found</li>
+           </ul>
+           
+           <div class="comment-box" id="comment-box-bigger">
+             <b>Observations</b>
+             <p id="ins"></p>
+           </div>
+           
+        </div>
+        <div class="input-box-container" style="text-align:center;">
+          <span>Number To be Searched:</span>
+          <input type="text" name="query" id="query" class="text-box">
+          <span>Binary Search Order:</span>
+          <input type="text" name="answer" id="answer" class="text-box">
+        </div>
+        
+        <div class="buttons-wrapper">
+          <input class="button-input" type="button" value="Check Answer" id="submit" >
+        </div>
+        
+     </div>
+     <script src="js/search_practice.js"></script>
+     <script src="https://ds1-iiith.vlabs.ac.in/exp-common-js/instruction-box.js"></script>
+  </body>
+</html>
