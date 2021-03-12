@@ -89,61 +89,49 @@
 
 
     const myQuestions = [{
-            question: "1. Sample question1", ///// Write the question inside double quotes
+            question: "1. Which of the following is correct recurrence for worst case of Binary Search?", ///// Write the question inside double quotes
             answers: {
-                a: "1", ///// Write the option 1 inside double quotes
-                b: "2", ///// Write the option 2 inside double quotes
- 		c: "3", ///// Write the option 3 inside double quotes
-                d: "4", ///// Write the option 4 inside double quotes
+                a: " T(n) = 2T(n/2) + O(1) and T(1) = T(0) = O(1)", ///// Write the option 1 inside double quotes
+                b: "T(n) = T(n-1) + O(1) and T(1) = T(0) = O(1) ", ///// Write the option 2 inside double quotes
+ 		c: "T(n) = T(n/2) + O(1) and T(1) = T(0) = O(1) ", ///// Write the option 3 inside double quotes
+                d: " T(n) = T(n-2) + O(1) and T(1) = T(0) = O(1) ", ///// Write the option 4 inside double quotes
             },
             correctAnswer: "c" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "2.Sample question2",  ///// Write the question inside double quotes
+      question: "2. Given a sorted array of integers, what can be the minimum worst case time complexity to find ceiling of a number x in given array? Ceiling of an element x is the smallest element present in array which is greater than or equal to x. Ceiling is not present if x is greater than the maximum element present in array. For example, if the given array is {12, 67, 90, 100, 300, 399} and x = 95, then output should be 100. ",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "O(LogLogn) ",                  ///// Write the option 1 inside double quotes
+        b: "O(n)",                  ///// Write the option 2 inside double quotes
+	c: "O(Logn) ", ///// Write the option 3 inside double quotes
+        d: "O(Logn * Logn) ", ///// Write the option 4 inside double quotes
+              },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+
+{
+      question: "3. Consider a sorted array of n numbers. What would be the time complexity of the best known algorithm to find a pair a and b such that |a-b| = k , k being a positive integer.",  ///// Write the question inside double quotes
+      answers: {
+        a: "O(n)",                  ///// Write the option 1 inside double quotes
+        b: "O(nlogn) ",                  ///// Write the option 2 inside double quotes
+	c: " O(n<sup>2</sup>>) ", ///// Write the option 3 inside double quotes
+        d: "O(n)", ///// Write the option 4 inside double quotes
               },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
 
 {
-      question: "3. Sample question3",  ///// Write the question inside double quotes
+      question: "4. Like linear search and binary search, ternary search is a searching technique that is used to determine the position of a specific value in an array. In binary search, the sorted array is divided into two parts while in ternary search, it is divided into 3 parts and then you determine in which part the element exists.<br>Ternary search, like binary search, is a divide-and-conquer algorithm. It is mandatory for the array (in which you will search for an element) to be sorted before you begin the search.<br>Is the following statement correct?'Ternary Search is better than Binary Search' ",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "True ",                  ///// Write the option 1 inside double quotes
+        b: "False ",                  ///// Write the option 2 inside double quotes
+	
               },
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     },
 
-{
-      question: "4.Sample question3",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-	e: "5 ", ///// Write the option 5 inside double quotes
-              },
-      correctAnswer: "a"                ///// Write the correct option inside double quotes
-    },
 
-{
-      question: "5. Sample question5",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3 ", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-	e: "5", ///// Write the option 4 inside double quotes
-              },
-      correctAnswer: "d"                ///// Write the correct option inside double quotes
-    },
         
     ];
 
