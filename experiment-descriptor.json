@@ -1,0 +1,193 @@
+{
+  "unit-type": "lu",
+  "label": "Unsorted Arrays vs Binary Search",
+  "basedir": ".",
+  "units": [
+    {
+      "unit-type": "aim"
+    },
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Recap",
+      "content-type": "video",
+      "source": "recap.md",
+      "target": "recap.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.js",
+      "target": "pretest.html"
+    },
+    {
+      "unit-type": "lu",
+      "label": "Linear Search",
+      "basedir": "linear-search",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+        {
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Basic Concept",
+          "content-type": "video",
+          "source": "basic-concept.md",
+          "target": "basic-concept.html"
+        },
+        {
+      "unit-type": "task",
+      "label": "Linear Search Algorithm",
+      "content-type": "video",
+      "source": "linear-search-algorithm.md",
+      "target": "linear-search-algorithm.md"
+    },
+      {
+          "unit-type": "task",
+          "label": "Linear Search Demo",
+          "content-type": "simulation",
+          "source": "simulation/linear_search_demo.html",
+          "target": "linear_search_demo.html"
+       },
+      {
+          "unit-type": "task",
+          "label": "Linear Search Quiz",
+          "content-type": "assissment",
+          "source": "linear-search-quiz.js",
+          "target": "linear-search-quiz.html"
+        }
+      ]
+    },
+    {
+      "unit-type": "lu",
+      "label": "Binary Search",
+      "basedir": "binary-search",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Basic Concept Binary Search",
+          "content-type": "video",
+          "source": "basic-concept-binary-search.md",
+          "target": "basic-concept-binary-search.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Binary Search Algorithm",
+          "content-type": "video",
+          "source": "binary-search-algorithm.md",
+          "target": "binary-search-algorithm.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": "Binary Search Demo",
+          "content-type": "simulation",
+          "source": "simulation/binary_search_demo.html",
+          "target": "binary_search_demo.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Binary Search Practice",
+          "content-type": "simulation",
+          "source": "simulation/binary_search_practice.html",
+          "target": "binary_search_practice.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Binary Search Exercise",
+          "content-type": "simulation",
+          "source": "simulation/binary_search_exercise.html",
+          "target": "binary_search_exercise.html"
+        },
+        {
+         "unit-type": "task",
+         "label": "Binary Search Quiz",
+         "content-type": "assesment",
+         "source": "binary-search-quiz.js",
+         "target": "binary-search-quiz.html"
+       }
+      ]
+    },
+        {
+      "unit-type": "lu",
+      "label": "Analysis",
+      "basedir": "analysis",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Time and Space Complexity",
+          "content-type": "video",
+          "source": "time-and-space-complexity.md",
+          "target": "time-and-space-complexity.html"
+        },
+        
+        
+	
+        {
+          "unit-type": "task",
+          "label": "Analysis Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.js",
+          "target": "analysis-quiz.html"
+        }
+      ]
+    },
+    
+    {
+      "unit-type": "task",
+      "label": "Post Test Instructions",
+      "content-type": "video",
+      "source": "post-test.md",
+      "target": "post-test.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.js",
+      "target": "posttest.html"
+    },
+       
+    {
+      "unit-type": "task",
+      "label": "Further Readings/References",
+      "content-type": "text",
+      "source": "further-reading-and-references.md",
+      "target": "further-reading-and-references.html"
+    }
+  ]
+}
