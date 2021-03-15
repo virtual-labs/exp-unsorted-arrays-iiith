@@ -55,7 +55,7 @@
       "content-type": "video",
       "source": "linear-search-algorithm.md",
       "target": "linear-search-algorithm.md"
-    },
+     },
       {
           "unit-type": "task",
           "label": "Linear Search Demo",
@@ -131,8 +131,8 @@
          "target": "binary-search-quiz.html"
        }
       ]
-    },
-        {
+     },
+     {
       "unit-type": "lu",
       "label": "Analysis",
       "basedir": "analysis",
@@ -154,9 +154,6 @@
           "source": "time-and-space-complexity.md",
           "target": "time-and-space-complexity.html"
         },
-        
-        
-	
         {
           "unit-type": "task",
           "label": "Analysis Quiz",
@@ -166,7 +163,6 @@
         }
       ]
     },
-    
     {
       "unit-type": "task",
       "label": "Post Test Instructions",
@@ -180,8 +176,7 @@
       "content-type": "assesment",
       "source": "posttest.js",
       "target": "posttest.html"
-    },
-       
+    },       
     {
       "unit-type": "task",
       "label": "Further Readings/References",
