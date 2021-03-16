@@ -22,7 +22,7 @@ And above all, a curiosity to learn and explore..!
 
 ### Experiment Modules & their Weightage
 | Module  | Weightage  | Expectation  |    
-|---|---|---|---|---|
+|---|---|---|
 |Pre-test   | 10%  |Solve All Questions   |  
 | Linear Search 	  |  25% | Understand the linear search algorithm  |    
 | Binary Search  | 25%  |Understand the binary search algorithm on sorted lists   |   
