@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <title>Binary Search Exercise</title>
+       <link rel="stylesheet"
+             href="css/unsorted-arrays.css">
+       <link rel="stylesheet" href="../../assets/css/common-styles.css">
+
+    <style>
+      button {
+        border-radius: 500px;
+        width: 15%;
+        height: 7%;
+        background-color: #288ec8;
+        border: none;
+        color: white;
+        padding: 1%;
+        text-align: center;
+        text-decoration: none;      
+      }
+    </style>
+  </head>
+  <body onload="randomise(1);">
+     <div class="instruction-box">
+       <button class="collapsible">Instructions</button>
+       <div class="content">
+          <ul>
+             <li>Enter the query element you want to search in
+             the given array.</li>
+             <li>Click on Start to begin the binary search.</li>
+             <li>Follow the running instructions and click on the
+             appropriate elements of the array to proceed the
+             search.</li>
+             <li>On completion, click on Start to try another
+             array.</li>
+          </ul>
+       </div> 
+     </div>
+     
+     <div id="wrapper">
+        <div id="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>         
+        </div>
+        
+        <div id="legend-comment-wrapper">
+           <ul class="legend">
+             <li><span class="green"></span> Current Element</li>
+             <li><span class="black"></span> Element Found</li>
+             <li><span class="red"></span> Element Not Found</li>
+           </ul>
+           
+           <div class="comment-box" id="comment-box-bigger">
+             <b>Observations</b>
+             <p id="ins"></p>
+           </div>
+           
+        </div>
+        <div class="slidecontainer">
+          <p>
+            Min. Speed
+            <input class="slider" type="range" min="100" max="2500" id="interval" value="1500" >
+            Max. Speed
+          </p>
+        </div>
+        
+        <div class="buttons-wrapper">
+          <input class="text-box" id="query" pattern="\d+" placeholder="Difference" required>
+          <button type="button-input" value="Reset" id="reset">Start</button>
+        </div>
+        
+     </div>
+     <script src="js/search_exercise.js"></script>
+     <script src="../../assets/js/instruction-box.js"></script>
+  </body>
+</html>
