@@ -1,6 +1,4 @@
-### Estimated Time
 
-1 hour
 ### Introduction
 <iframe src="https://www.youtube.com/embed/3KKOXD8P4lY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
