@@ -51,10 +51,10 @@
         },
         {
       "unit-type": "task",
-      "label": "Linear Search Algorithm",
+      "label": "Algorithm",
       "content-type": "video",
       "source": "linear-search-algorithm.md",
-      "target": "linear-search-algorithm.md"
+      "target": "linear-search-algorithm.html"
      },
       {
           "unit-type": "task",
@@ -89,14 +89,14 @@
         },
         {
           "unit-type": "task",
-          "label": "Basic Concept Binary Search",
+          "label": "Basic Concept",
           "content-type": "video",
           "source": "basic-concept-binary-search.md",
           "target": "basic-concept-binary-search.html"
         },
         {
           "unit-type": "task",
-          "label": "Binary Search Algorithm",
+          "label": "Algorithm",
           "content-type": "video",
           "source": "binary-search-algorithm.md",
           "target": "binary-search-algorithm.html"
