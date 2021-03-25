@@ -1,5 +1,5 @@
 
-### Introduction
+<!--### Introduction-->
 <iframe src="https://www.youtube.com/embed/3KKOXD8P4lY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Prerequisites of the Experiment
@@ -11,6 +11,7 @@ This experiment requires you to have basic knowledge about :
    - [Notion of Time and Space complexity](https://en.wikipedia.org/wiki/Time_complexity)
 
 And above all, a curiosity to learn and explore..!
+
 ### Overview of the Experiment
 
    - The aim of this experiment is to understand the concepts of searching. The experiment elaborates on different techniques of searching namely the Linear Search and Binary Search, understanding the requirements of both and analysing the time complexity.

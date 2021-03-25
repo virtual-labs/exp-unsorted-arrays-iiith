@@ -1,3 +1,6 @@
+### Binary Search Concept
+<iframe src="https://www.youtube.com/embed/SYaVzxkGFsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Idea
 The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n) In Binary search, we adopt the most following strategy.
 
