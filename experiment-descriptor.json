@@ -44,28 +44,28 @@
         },
 	{
           "unit-type": "task",
-          "label": "Basic Concept",
+          "label": "Concept",
           "content-type": "video",
           "source": "basic-concept.md",
           "target": "basic-concept.html"
         },
         {
       "unit-type": "task",
-      "label": "Linear Search Algorithm",
+      "label": "Algorithm",
       "content-type": "video",
       "source": "linear-search-algorithm.md",
-      "target": "linear-search-algorithm.md"
+      "target": "linear-search-algorithm.html"
      },
       {
           "unit-type": "task",
-          "label": "Linear Search Demo",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/linear_search_demo.html",
           "target": "linear_search_demo.html"
        },
       {
           "unit-type": "task",
-          "label": "Linear Search Quiz",
+          "label": "Quiz",
           "content-type": "assesment",
           "source": "linear-search-quiz.js",
           "target": "linear-search-quiz.html"
@@ -89,14 +89,14 @@
         },
         {
           "unit-type": "task",
-          "label": "Basic Concept Binary Search",
+          "label": "Basic Concept",
           "content-type": "video",
           "source": "basic-concept-binary-search.md",
           "target": "basic-concept-binary-search.html"
         },
         {
           "unit-type": "task",
-          "label": "Binary Search Algorithm",
+          "label": "Algorithm",
           "content-type": "video",
           "source": "binary-search-algorithm.md",
           "target": "binary-search-algorithm.html"
@@ -104,28 +104,28 @@
         
 	{
           "unit-type": "task",
-          "label": "Binary Search Demo",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/binary_search_demo.html",
           "target": "binary_search_demo.html"
         },
 	{
           "unit-type": "task",
-          "label": "Binary Search Practice",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/binary_search_practice.html",
           "target": "binary_search_practice.html"
         },
         {
           "unit-type": "task",
-          "label": "Binary Search Exercise",
+          "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/binary_search_exercise.html",
           "target": "binary_search_exercise.html"
         },
         {
          "unit-type": "task",
-         "label": "Binary Search Quiz",
+         "label": "Quiz",
          "content-type": "assesment",
          "source": "binary-search-quiz.js",
          "target": "binary-search-quiz.html"
@@ -156,7 +156,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Analysis Quiz",
+          "label": "Quiz",
           "content-type": "assesment",
           "source": "analysis-quiz.js",
           "target": "analysis-quiz.html"
