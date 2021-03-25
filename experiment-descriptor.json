@@ -35,13 +35,7 @@
         {
           "unit-type": "aim"
         },
-        {
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+        
 	{
           "unit-type": "task",
           "label": "Concept",
@@ -80,16 +74,10 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
-          "label": "Basic Concept",
+          "label": "Concept",
           "content-type": "video",
           "source": "basic-concept-binary-search.md",
           "target": "basic-concept-binary-search.html"
