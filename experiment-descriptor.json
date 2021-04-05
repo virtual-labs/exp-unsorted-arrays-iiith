@@ -21,13 +21,6 @@
       "target": "recap.html"
     },
     {
-      "unit-type": "task",
-      "label": "Pre Test Quiz",
-      "content-type": "assesment",
-      "source": "pretest.js",
-      "target": "pretest.html"
-    },
-    {
       "unit-type": "lu",
       "label": "Linear Search",
       "basedir": "linear-search",
@@ -56,14 +49,7 @@
           "content-type": "simulation",
           "source": "simulation/linear_search_demo.html",
           "target": "linear_search_demo.html"
-       },
-      {
-          "unit-type": "task",
-          "label": "Quiz",
-          "content-type": "assesment",
-          "source": "linear-search-quiz.js",
-          "target": "linear-search-quiz.html"
-        }
+       }
       ]
     },
     {
@@ -110,14 +96,7 @@
           "content-type": "simulation",
           "source": "simulation/binary_search_exercise.html",
           "target": "binary_search_exercise.html"
-        },
-        {
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "binary-search-quiz.js",
-         "target": "binary-search-quiz.html"
-       }
+        }
       ]
      },
      {
@@ -141,24 +120,10 @@
           "content-type": "video",
           "source": "time-and-space-complexity.md",
           "target": "time-and-space-complexity.html"
-        },
-        {
-          "unit-type": "task",
-          "label": "Quiz",
-          "content-type": "assesment",
-          "source": "analysis-quiz.js",
-          "target": "analysis-quiz.html"
         }
       ]
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz",
-      "content-type": "assesment",
-      "source": "posttest.js",
-      "target": "posttest.html"
-    },       
+      
     {
       "unit-type": "task",
       "label": "Further Readings/References",
