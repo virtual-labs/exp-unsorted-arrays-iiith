@@ -1,0 +1,76 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. How is a linear search performed?",
+            "answers": {
+                "a": "An element is copied linearly in another array until the required element comes up.",
+                "b": "Array is broken into smaller subarrays and elements are searched recursively.",
+                "c": "Array is traversed from left to right using a loop, until the required element comes up.",
+                "d": "None of the above"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "There is no need to create a new array for searching an element.",
+                "b": "This method can also find an element, but this is not linear search."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. In the worst case, what is the time complexity of linear search?",
+            "answers": {
+                "a": "O(log N)",
+                "b": "O(1)",
+                "c": "O(N)",
+                "d": "O(N log N)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "In the worst case, each element is traversed at least once. Thus time complexity is O(N) i.e. the size of the array."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. In the best case, what is the time complexity of linear search?",
+            "answers": {
+                "a": "O(1)",
+                "b": "O(N log N)",
+                "c": "O(log N)",
+                "d": "O(N)"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "In the best case, when the required element is in the beginning of the array, linear search just needs to access the first element of the array. Hence the resulting time complexity is constant."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. How is linear search disadvantageous?",
+            "answers": {
+                "a": "Time taken to find an element is more as compared to other searching algorithms",
+                "b": "Space complexity to perform a linear search increases the memory overhead",
+                "c": "It is difficult to implement linear search.",
+                "d": "None of the above"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "Yes, there are other search algorithms available which perform much better than linear search.",
+                "b": "There is no role of space complexity while performing linear search. Since we are assessing and comparing the elements in the array, instead of storing anything.",
+                "c": "It is very easy to implement linear search, as it requires just a loop and an if condition to check for the element."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. For an ordered linear search, O(log n) is the worst case time complexity.<br>(An ordered linear search is the linear search on an array which is already sorted)",
+            "answers": {
+                "a": "True",
+                "b": "False"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "Whether it be an ordered or unordered linear search, time complexities remain the same."
+            },
+            "difficulty": "advanced"
+        }
+    ]
+}
