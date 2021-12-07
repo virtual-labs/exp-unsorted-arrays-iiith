@@ -1,0 +1,79 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. How do you describe an array?",
+            "answers": {
+                "a": "Data structure having linear access time",
+                "b": "Data structure containing elements of similar types in contiguous storage",
+                "c": "A container of unique elements of similar types",
+                "d": "Data structure containing elements located in various locations memory which may or may not be contiguous"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "Access time in an array is constant, not linear.",
+                "c": "Elements in an array may or may not be unique.",
+                "d": "Array always stores its elements in contiguous memory locations."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What is the time complexity of traversing through all the elements in an array?",
+            "answers": {
+                "a": "O(N^2)",
+                "b": "O(1)",
+                "c": "O(N)",
+                "d": "O(log N)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "To traverse through all the elements in an array, one needs to visit all the elements at least once. Hence the time complexity is O(N) i.e. the size of the array."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Let us consider the following code:<pre><code>int a = 0, b[N];<br>for (i = 0; i < M; i++) {<br>    a+=i;<br>}<br>for (i = 0; i < N; i++) {<br>    scanf(\\\u201c%d\\\u201d, &b[i]);<br>    a+=b[i];<br>}</code></pre>What is the space and time complexity of the above code?",
+            "answers": {
+                "a": "Space: O(M+N), Time: O(M+N)",
+                "b": "Space: O(N), Time: O(M*N)",
+                "c": "Space: O(M), Time: O(M)",
+                "d": "Space: O(N), Time: O(M+N)"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "Since a is a variable for integer input, hence it will occupy space for just one integer. Whereas b is an array of length N, thus it will occupy space for N integers. Since both loops will be executed one after the other, hence the resulting time complexity will be the sum of iterations of both loops i.e. M+N."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "4. Let us consider following four arrays:<br>A = [9, 5, 11, 25, 7, 35]<br>B = [1, 2, 9, 15, 27]<br>C = [29, 27, 27, 18, 4, 2]<br>D = [1, 8, 2, 5, 6, 7, 8, 9]<br>Which of the arrays are sorted?",
+            "answers": {
+                "a": "A and C",
+                "b": "B and D",
+                "c": "B and C",
+                "d": "A and D"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "B is sorted in ascending order, whereas C is sorted in descending order."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5. If for large inputs, X is a better choice than Y, then:",
+            "answers": {
+                "a": "Y is asymptotically more efficient than X",
+                "b": "X is asymptotically more efficient than Y",
+                "c": "X and Y are equivalently efficient",
+                "d": "None of the above"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "Incorrect, Y cannot be more efficient as X is a better choice",
+                "b": "Since X is asymptotically more efficient than Y, hence X will perform better in case of large inputs",
+                "c": "Since X is getting preferred, hence X and Y cannot be equivalent"
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
