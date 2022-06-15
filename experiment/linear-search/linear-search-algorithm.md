@@ -2,7 +2,7 @@
 <iframe src="https://www.youtube.com/embed/_e3bkK5cMY4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Observations
-All the elements are compared untill a successfull match is found.
+All the elements are compared until a successfull match is found.
 
 ### Iteration by Iteration Visualization of Linear Search
 <img src="images/linear_search_stepwise.png"/>

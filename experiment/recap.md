@@ -1,6 +1,6 @@
 ### What is Sorting?
 
-A given list of numbers is said to be sorted if the numbers are **ordered**> either in **ascending** or **descending** order. By default, we sort the numbers in ascending order.
+A given list of numbers is said to be sorted if the numbers are **ordered** either in **ascending** or **descending** order. By default, we sort the numbers in ascending order.
 ### Unsorted and Sorted arrays
 <img src="images/sorted_vs_unsorted.png"/>
 
