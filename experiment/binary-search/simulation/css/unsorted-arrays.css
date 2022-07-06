@@ -25,8 +25,47 @@
     float: left;
 }
 
+
 .red {
     background-color: #dc143c;
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
+}
+
+.green {
+    background-color: #a4c652;
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
+}
+
+.black {
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
+}
+
+.grey {
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
+}
+
+.blue {
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
 }
 
 .comment-box {
