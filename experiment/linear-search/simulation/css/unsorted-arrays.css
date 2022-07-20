@@ -44,6 +44,7 @@
 }
 
 .black {
+    background-color: black;
     border-radius: 0%;
     width: 3.2vw;
     margin-top: 2.8%;
@@ -52,6 +53,7 @@
 }
 
 .grey {
+    background-color: grey;
     border-radius: 0%;
     width: 3.2vw;
     margin-top: 2.8%;
@@ -60,12 +62,19 @@
 }
 
 .blue {
+    background-color: #288ec8;
     border-radius: 0%;
     width: 3.2vw;
     margin-top: 2.8%;
     height: 0.35vw;
     border: 0vw solid grey;
 }
+
+.legend { list-style: none; }
+.legend li { padding-bottom : 1.5vw; width: 20vw; }
+.legend span { border: 0vw solid black; float: left; border-radius: 0%;}
+
+
 .comment-box {
     margin: auto;
 }
@@ -98,3 +107,4 @@ p,span {
     /* font-size: 1.5vw; */
     text-align: center;
 }
+
