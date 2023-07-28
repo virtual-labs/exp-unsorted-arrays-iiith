@@ -1,0 +1,76 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the recurrence relation for the binary search?",
+            "answers": {
+                "a": "T(n) = T(n/2 + 1) + O(1)",
+                "b": "T(n) = T((n+1)/2) + O(1)",
+                "c": "T(n) = T(n/2) + O(1)",
+                "d": "T(n) = 2*T(n/2) + O(1)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "Binary search requires constant time to perform comparison and searches on just half of the array in every recurrence."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. In a linked list, which algorithm can be used to search for an element?",
+            "answers": {
+                "a": "Binary Search",
+                "b": "Linear Search",
+                "c": "Both Linear and Binary Search",
+                "d": "None of the above"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "In a linked list, one cannot access every element in constant time. Hence binary search cannot be performed.",
+                "b": "Yes, one needs to traverse from the beginning to the end of the linked list and find the element, which is linear search.",
+                "c": "In a linked list, one cannot access every element in constant time. Hence binary search cannot be performed."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Let us consider a sorted array of length N. What would be the best time complexity of the algorithm to find a pair of numbers such that absolute difference between them is equal to p? (i.e (x,y) where |x-y| = p)",
+            "answers": {
+                "a": "O(N)",
+                "b": "O(N^2)",
+                "c": "O(log N)",
+                "d": "O(log(log N))"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "A modified linear search can be used to solve this problem. We can maintain two pointers in the beginning of the array, and move them based on absolute difference which would be less than or greater than k."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "4. Binary search is better than linear search for a static sorted array.",
+            "answers": {
+                "a": "True",
+                "b": "False"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "Yes, due to constant access in an array, binary search performs much better than linear search."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5. In an array, what would be the time complexity to find the closest upper bound of a given number?",
+            "answers": {
+                "a": "O(log N)",
+                "b": "O(N log N)",
+                "c": "O(1)",
+                "d": "O(N)"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "a": "This could have been an answer, if in the question it was mentioned that the array is sorted. But since it is not mentioned, we cannot use binary search.",
+                "d": "Yes, modifying the linear search algorithm will give us the desired result in linear time."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
