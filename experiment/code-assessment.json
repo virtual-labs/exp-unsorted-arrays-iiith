@@ -11,7 +11,8 @@
             ],
             "expected": [false, 10],
             "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
-            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required"
+            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+            "difficulty": "beginner"
         },
         {
             "problem name": "Binary Search",
@@ -22,7 +23,8 @@
             ],
             "expected": [false, 4],
             "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
-            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required"
+            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+            "difficulty": "intermediate"
         }
     ]
 }
