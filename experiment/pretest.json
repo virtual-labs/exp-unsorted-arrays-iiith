@@ -46,7 +46,7 @@
             "difficulty": "advanced"
         },
         {
-            "question": "4. Let us consider following four arrays:<br>A = [9, 5, 11, 25, 7, 35]<br>B = [1, 2, 9, 15, 27]<br>C = [29, 27, 27, 18, 4, 2]<br>D = [1, 8, 2, 5, 6, 7, 8, 9]<br>Which of the arrays are sorted?",
+            "question": "4. Let us consider following four arrays:<br>A = [9, 5, 11, 25, 7, 35]<br>B = [1, 2, 9, 15, 27]<br>C = [29, 27, 27, 18, 4, 2]<br>D = [1, 8, 2, 5, 6, 7, 8, 9]<br>Which of the arrays are sorted in either ascending or descending order?",
             "answers": {
                 "a": "A and C",
                 "b": "B and D",
