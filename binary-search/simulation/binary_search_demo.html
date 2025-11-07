@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <title>Binary Search</title>
+       <link rel="stylesheet" href="css/unsorted-arrays.css">
+       <link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+  </head>
+  <body onload="randomise(1);">
+     <div class="instruction-box">
+       <button class="collapsible">Instructions</button>
+       <div class="content">
+         <ul>
+           <li>Click on the <b>Start</b> button to start the
+             demo.</li>
+           <li>Move the slider to adjust the speed of the
+             demo.</li>
+           <li>Click on the <b>Pause</b> button if you want to stop
+             and manually click the <b>Next</b> button to have a step
+             by step realization of the process.</li>
+           <li>Click on the <b>Reset</b> button to start all over
+             with a new set of random numbers!</li>
+         </ul>
+       </div>
+     </div>
+     
+     <div id="wrapper">
+        <div id="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>    
+        </div>
+        
+        <div id="legend-comment-wrapper">
+           <ul class="legend">
+            <table>
+              <tr><td><b>Legend:</b></td></tr>
+              <tr><td><span class="green"></span>&ensp;Current Element</td></tr>
+              <tr><td><span class="black"></span>&ensp;Element Found</td></tr>
+              <tr><td><span class="red"></span>&ensp;Element Not Found</td></tr>
+              <tr><td><span class="grey"></span>&ensp;Visited Element</td></tr>
+              <tr><td><span class="blue"></span>&ensp;Unvisited Element</td></tr>
+           </table>
+           </ul>
+           
+           <div class="comment-box" id="comment-box-bigger">
+             <b>Observations</b>
+             <p id="ins"></p>
+           </div>
+           
+        </div>
+        <div class="slidecontainer">
+          <p>
+            Min. Speed
+            <input class="slider" type="range" min="100" max="2500" id="interval" value="1500" >
+            Max. Speed
+          </p>
+        </div>
+        
+        <div class="input-box-container">
+          <span>Number To be Searched:</span>
+          <input type="text" name="query" id="query" class="text-box">
+        </div>
+        
+        <div class="buttons-wrapper">
+          <input class="button-input" type="button" value="Start" id="next">
+          <input class="button-input" type="button" value="Reset" id="reset">
+          <input class="button-input" type="button" value="Pause" id="pause">
+        </div>
+        
+     </div>
+     <script src="js/search_demo.js"></script>
+     <script src="../../assets/js/instruction-box.js"></script>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

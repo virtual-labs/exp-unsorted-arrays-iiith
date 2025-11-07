@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Linear Search Demonstration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/unsorted-arrays.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/common-styles-responsive.css"
+    />
+  </head>
+  <body onload="randomise(0);">
+    <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li>
+            Enter the number you want to search for in the "Number To be
+            Searched" box.
+          </li>
+          <li>
+            Click the <b>Start</b> button to begin the linear search
+            demonstration.
+          </li>
+          <li>
+            The simulation will highlight each array element as it is checked.
+          </li>
+          <li>
+            If the searched number is found, it will be highlighted and the
+            search will stop.
+          </li>
+          <li>
+            If the number is not found after checking all elements, the
+            simulation will indicate that the element is not present in the
+            array.
+          </li>
+          <li>
+            Adjust the slider to change the speed of the automatic search.
+          </li>
+          <li>
+            Click the <b>Reset</b> button to generate a new set of random
+            numbers and start a new search.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <div id="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+
+      <div id="legend-comment-wrapper">
+        <ul class="legend">
+          <table>
+            <tr>
+              <td><b>Legend:</b></td>
+            </tr>
+            <tr>
+              <td><span class="green"></span>&ensp;Current Element</td>
+            </tr>
+            <tr>
+              <td><span class="black"></span>&ensp;Element Found</td>
+            </tr>
+            <tr>
+              <td><span class="red"></span>&ensp;Element Not Found</td>
+            </tr>
+            <tr>
+              <td><span class="grey"></span>&ensp;Visited Element</td>
+            </tr>
+            <tr>
+              <td><span class="blue"></span>&ensp;Unvisited Element</td>
+            </tr>
+          </table>
+        </ul>
+
+        <div class="comment-box" id="comment-box-bigger">
+          <b>Observations</b>
+          <p id="ins"></p>
+        </div>
+      </div>
+      <div class="slidecontainer">
+        <p>
+          Min. Speed
+          <input
+            class="slider"
+            type="range"
+            min="100"
+            max="2500"
+            id="interval"
+            value="1500"
+          />
+          Max. Speed
+        </p>
+      </div>
+
+      <div class="input-box-container">
+        <span>Number To be Searched:</span>
+        <input type="text" name="query" id="query" class="text-box" />
+      </div>
+
+      <div class="buttons-wrapper">
+        <input class="button-input" type="button" value="Start" id="next" />
+        <input class="button-input" type="button" value="Reset" id="reset" />
+        <input
+          class="button-input"
+          type="button"
+          value="Pause"
+          id="pause"
+          style="display: none"
+        />
+      </div>
+    </div>
+    <script src="js/search_demo.js"></script>
+    <script src="../../assets/js/instruction-box.js"></script>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

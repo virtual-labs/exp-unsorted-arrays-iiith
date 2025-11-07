@@ -1,0 +1,180 @@
+#wrapper {
+  padding-top: 2%;
+}
+
+#cards {
+  position: relative;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  /* font-size: 1.5vw; */
+  padding: 1.7%;
+  margin: 0.05%;
+  color: white;
+  background-color: #288ec8;
+}
+
+#legend-comment-wrapper {
+  padding-top: 2%;
+  height: 20vh;
+}
+
+.legend {
+  float: left;
+}
+
+.red {
+  background-color: #dc143c;
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.green {
+  background-color: #a4c652;
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.black {
+  background-color: black;
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.grey {
+  background-color: grey;
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.blue {
+  background-color: #288ec8;
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.legend {
+  list-style: none;
+}
+.legend li {
+  padding-bottom: 1.5vw;
+  width: 20vw;
+}
+.legend span {
+  border: 0vw solid black;
+  float: left;
+  border-radius: 0%;
+}
+
+.comment-box {
+  margin: auto;
+}
+
+.slidecontainer {
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+.input-box-container {
+  text-align: center;
+}
+
+.buttons-wrapper {
+  text-align: center;
+  padding-top: 2%;
+}
+
+#question {
+  /* font-size: 1.5vw; */
+  text-align: justify;
+  padding-bottom: 2%;
+}
+
+#type {
+  padding-top: 12%;
+}
+
+p,
+span {
+  /* font-size: 1.5vw; */
+  text-align: center;
+}
+
+/* Mobile Responsive - Stack all divs vertically */
+@media screen and (max-width: 768px) {
+  #wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px;
+    position: static !important; /* Reset any absolute positioning */
+  }
+
+  #cards,
+  #legend-comment-wrapper,
+  .slidecontainer,
+  .input-box-container,
+  .buttons-wrapper {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    position: static !important; /* Reset positioning */
+    float: none !important; /* Reset floats */
+  }
+
+  #legend-comment-wrapper {
+    height: auto !important;
+    padding-top: 10px !important; /* Reset the 2% padding */
+  }
+
+  .legend {
+    float: none !important; /* This was causing the overlap */
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .comment-box {
+    margin: 10px 0 !important;
+    width: 100% !important;
+  }
+
+  /* Make cards stack horizontally and scrollable if needed */
+  #cards {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 5px;
+  }
+
+  .card {
+    min-width: 60px;
+    flex-shrink: 0;
+  }
+  .input-box-container span {
+    display: block !important;
+    margin-bottom: 10px !important;
+  }
+
+  .input-box-container input[type="text"] {
+    display: block !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    padding: 8px !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+}

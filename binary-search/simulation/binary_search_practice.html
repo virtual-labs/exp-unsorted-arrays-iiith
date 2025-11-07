@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary Search Practice</title>
+    <link rel="stylesheet" href="css/unsorted-arrays.css">
+    <link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+  </head>
+  <body onload="randomise();">
+     <div class="instruction-box">
+       <button class="collapsible">Instructions</button>
+       <div class="content">
+         <ul>
+           <li>Enter the Binary Search order for searching the given query element given.</li>
+           <li>Enter the order in terms of the indices of the elements of the array.</li>
+           <li>Seperate the indices with commas. Eg. 4, 3, 2, 1</li>
+           <li>Submit your answer and click Try Again for another question.</li>
+         </ul>
+       </div>
+     </div>
+     
+     <div id="wrapper">
+        <div id="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+        
+        <div id="legend-comment-wrapper">
+           <ul class="legend">
+            <table>
+              <tr><td><b>Legend:</b></td></tr>
+              <tr><td><span class="green"></span>&ensp;Current Element</td></tr>
+              <tr><td><span class="black"></span>&ensp;Element Found</td></tr>
+              <tr><td><span class="red"></span>&ensp;Element Not Found</td></tr>
+              <tr><td><span class="grey"></span>&ensp;Visited Element</td></tr>
+              <tr><td><span class="blue"></span>&ensp;Unvisited Element</td></tr>
+           </table>
+           </ul>
+           
+           <div class="comment-box" id="comment-box-bigger">
+             <b>Observations</b>
+             <p id="ins"></p>
+           </div>
+           
+        </div>
+        <div class="input-box-container" style="text-align:center;">
+          <span>Number To be Searched:</span>
+          <input type="text" name="query" id="query" class="text-box">
+          <span>Binary Search Order:</span>
+          <input type="text" name="answer" id="answer" class="text-box">
+        </div>
+        
+        <div class="buttons-wrapper">
+          <input class="button-input" type="button" value="Check Answer" id="submit" >
+        </div>
+        
+     </div>
+     <script src="js/search_practice.js"></script>
+     <script src="../../assets/js/instruction-box.js"></script>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Linear Search",
+            "description": "You are given an unsorted array of numbers and a target element. Find if the target node occurs in the list using linear search and return the number of elements required to check ",
+            "inputs": [
+                [2,5,1,15,22,19,100,81,70,149],
+                101
+            ],
+            "expected": [false, 10],
+            "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
+            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+            "difficulty": "beginner"
+        },
+        {
+            "problem name": "Binary Search",
+            "description": "You are given an unsorted array of numbers and a target element. Find if the target node occurs in the list using binary search(sort the list first) and return the number of elements required to check ",
+            "inputs": [
+                [2,5,1,15,22,19,100,81,70,149],
+                101
+            ],
+            "expected": [false, 4],
+            "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
+            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+            "difficulty": "intermediate"
+        }
+    ]
+}
