@@ -1,30 +1,24 @@
 {
-    "version": 1,
-    "experiment name": "Experiment Name",
-    "problems": [
-        {
-            "problem name": "Linear Search",
-            "description": "You are given an unsorted array of numbers and a target element. Find if the target node occurs in the list using linear search and return the number of elements required to check ",
-            "inputs": [
-                [2,5,1,15,22,19,100,81,70,149],
-                101
-            ],
-            "expected": [false, 10],
-            "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
-            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
-            "difficulty": "beginner"
-        },
-        {
-            "problem name": "Binary Search",
-            "description": "You are given an unsorted array of numbers and a target element. Find if the target node occurs in the list using binary search(sort the list first) and return the number of elements required to check ",
-            "inputs": [
-                [2,5,1,15,22,19,100,81,70,149],
-                101
-            ],
-            "expected": [false, 4],
-            "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
-            "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 1,
+  "experiment name": "Experiment Name",
+  "problems": [
+    {
+      "problem name": "Linear Search",
+      "description": "Implement linear search to find a target element in an unsorted array and count the number of comparisons made. Linear search checks each element sequentially from start to end until the target is found or the array ends. Return an array with two elements: first element is true if target exists (false otherwise), second element is the number of comparisons made. Example: searching for 101 in [2,5,1,15,22,19,100,81,70,149] returns [false, 10] because all 10 elements were checked without finding 101. Only JavaScript is allowed.",
+      "inputs": [[2, 5, 1, 15, 22, 19, 100, 81, 70, 149], 101],
+      "expected": [false, 10],
+      "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
+      "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+      "difficulty": "beginner"
+    },
+    {
+      "problem name": "Binary Search",
+      "description": "Implement binary search to find a target element in an unsorted array and count the number of comparisons made. First sort the array, then perform binary search by repeatedly dividing the search interval in half: compare target with middle element, if equal return found, if target is less search left half, if greater search right half. Return an array with two elements: first element is true if target exists (false otherwise), second element is the number of comparisons made during binary search. Example: searching for 101 in [2,5,1,15,22,19,100,81,70,149] returns [false, 4] because binary search only needs 4 comparisons. Only JavaScript is allowed.",
+      "inputs": [[2, 5, 1, 15, 22, 19, 100, 81, 70, 149], 101],
+      "expected": [false, 4],
+      "inputs description": "Input consists of an array of unsorted array - inp1 and the target element - inp2.",
+      "expected description": "list with first element - true if the target exists otherwise false and the second element - number of checks required",
+      "difficulty": "intermediate"
+    }
+  ]
 }
