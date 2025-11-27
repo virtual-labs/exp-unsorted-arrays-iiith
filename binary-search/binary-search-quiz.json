@@ -1,0 +1,76 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the prerequisite to perform Binary Search?",
+            "answers": {
+                "a": "The values in the array have a maximum bound value they can take",
+                "b": "Array must be sorted either in ascending or descending order",
+                "c": "Array must be broken into sub-arrays",
+                "d": "None of the above"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "There is no need of having any upper limit for the values before performing binary search.",
+                "b": "In order to perform a binary search, the array must be sorted."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. Binary Search is an example of _______ algorithm.",
+            "answers": {
+                "a": "Greedy",
+                "b": "Dynamic Programming",
+                "c": "Backtracking",
+                "d": "None of the above"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "Binary search is just an optimization over bruteforce method which exploits ordering in an array. This optimization is done by following the principles of divide and conquer where we are reducing the size of the set to search in, in every iteration."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Let us assume an array [1,23,145,178,1203]. How many iterations are needed to find 23? [Assuming we are considering floor of values for floating point values, and index starting from 1]",
+            "answers": {
+                "a": "3",
+                "b": "4",
+                "c": "2",
+                "d": "5"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "In the first iteration, element at index = 3 (i.e. 145) will be checked, then element at index = 1 (i.e. 1) will be checked, and at last, element at index = 2 (i.e. 23) will be checked and will be found."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "4. Let us assume an array [11, 33, 145, 1294, 1356, 1450, 3300, 4500, 6000, 8000, 9000]. Let us search for 4500 using binary search. What would be the mid values at the second and third iteration respectively? [Assuming we are considering floor of values for floating point values, and index starting from 1]",
+            "answers": {
+                "a": "1450 and 6000",
+                "b": "6000 and 3300",
+                "c": "6000 and 4500",
+                "d": "1450 and 4500"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "In the first iteration, 1450 will be the middlemost value, then in the second iteration, 6000 will be the middlemost value. In the third iteration, 3300 will be the middlemost value."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "5. What is the space complexity of binary search implemented using recursion?",
+            "answers": {
+                "a": "O(1)",
+                "b": "O(N)",
+                "c": "O(N log N)",
+                "d": "O(log N)"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "Using recursion, at max log N stack frames would be formed in the memory, in the worst case."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}

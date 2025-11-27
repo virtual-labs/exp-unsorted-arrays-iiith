@@ -1,0 +1,61 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the value of base-2 logarithm of 512 i.e. log2(512)?",
+            "answers": {
+                "a": "8",
+                "b": "11",
+                "c": "9",
+                "d": "10"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "Since, 2^9 = 512, hence 9 is the result."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. Around 18 teams made it to the final round of VLead Intercollegiate Basketball Championship. If the team leaders\u2019 names are arranged in an ascending order and binary search is applied, then how many iterations are needed to find a particular team leader?",
+            "answers": {
+                "a": "At most 18",
+                "b": "At most 5",
+                "c": "At least 5",
+                "d": "At least 6"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "Since, in the worst case, floor(log(n) + 1) iterations are performed. Thus, floor(log(18) + 1) = floor(4.169 + 1) = floor(5.169) = 5"
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "3. In the best case scenario, if we perform a binary search on a sorted array of length N, how many iterations are needed to determine that an element is not present in the array?",
+            "answers": {
+                "a": "floor(log(N))",
+                "b": "ceil(log(N))",
+                "c": "ceil(log(N) + 1)",
+                "d": "floor(log(N) + 1)"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "If the element is not present in the array, then it would become the worst case scenario. Hence, here the best case will be equal to the worst case, and thus floor(log(N) + 1) iterations will be required."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. In the best case scenario, if we perform an optimised linear search on a sorted array of length N, how many iterations are needed to determine that an element is not present in the array?",
+            "answers": {
+                "a": "N",
+                "b": "1",
+                "c": "log(N) + 1",
+                "d": "N+1"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "We can assume a best case scenario of finding an element which is smaller than the shortest element present in the array. Hence with the knowledge of the array being sorted, the modified algorithm will stop iterating after checking the first element."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
