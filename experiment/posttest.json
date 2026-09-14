@@ -1,76 +1,154 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the recurrence relation for the binary search?",
-            "answers": {
-                "a": "T(n) = T(n/2 + 1) + O(1)",
-                "b": "T(n) = T((n+1)/2) + O(1)",
-                "c": "T(n) = T(n/2) + O(1)",
-                "d": "T(n) = 2*T(n/2) + O(1)"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "Binary search requires constant time to perform comparison and searches on just half of the array in every recurrence."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. In a linked list, which algorithm can be used to search for an element?",
-            "answers": {
-                "a": "Binary Search",
-                "b": "Linear Search",
-                "c": "Both Linear and Binary Search",
-                "d": "None of the above"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "In a linked list, one cannot access every element in constant time. Hence binary search cannot be performed.",
-                "b": "Yes, one needs to traverse from the beginning to the end of the linked list and find the element, which is linear search.",
-                "c": "In a linked list, one cannot access every element in constant time. Hence binary search cannot be performed."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. Let us consider a sorted array of length N. What would be the best time complexity of the algorithm to find a pair of numbers such that absolute difference between them is equal to p? (i.e (x,y) where |x-y| = p)",
-            "answers": {
-                "a": "O(N)",
-                "b": "O(N^2)",
-                "c": "O(log N)",
-                "d": "O(log(log N))"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "A modified linear search can be used to solve this problem. We can maintain two pointers in the beginning of the array, and move them based on absolute difference which would be less than or greater than k."
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "4. Binary search is better than linear search for a static sorted array.",
-            "answers": {
-                "a": "True",
-                "b": "False"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "Yes, due to constant access in an array, binary search performs much better than linear search."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "5. In an array, what would be the time complexity to find the closest upper bound of a given number?",
-            "answers": {
-                "a": "O(log N)",
-                "b": "O(N log N)",
-                "c": "O(1)",
-                "d": "O(N)"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "a": "This could have been an answer, if in the question it was mentioned that the array is sorted. But since it is not mentioned, we cannot use binary search.",
-                "d": "Yes, modifying the linear search algorithm will give us the desired result in linear time."
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the recurrence relation for Binary Search?",
+      "answers": {
+        "a": "$T(n) = T(n/2 + 1) + O(1)$",
+        "b": "$T(n) = T((n+1)/2) + O(1)$",
+        "c": "$T(n) = T(n/2) + O(1)$",
+        "d": "$T(n) = 2T(n/2) + O(1)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This form does not represent the standard reduction of the search space by approximately half in each Binary Search step.",
+        "b": "Incorrect. The expression does not correctly represent the standard recursive reduction used by Binary Search.",
+        "c": "Correct. Binary Search performs a constant amount of work to compare the target with the middle element and then continues with approximately half of the current search space. Hence, the recurrence is $T(n) = T(n/2) + O(1)$.",
+        "d": "Incorrect. This recurrence represents two recursive subproblems of approximately half the original size, whereas Binary Search continues with only one half."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. In a linked list, which algorithm can be used to search for an element?",
+      "answers": {
+        "a": "Binary Search",
+        "b": "Linear Search",
+        "c": "Both Linear Search and Binary Search",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Binary Search relies on efficient access to the middle element, which is not directly available in a linked list.",
+        "b": "Correct. Linear Search can be performed by traversing the linked list from the beginning and comparing each element with the target.",
+        "c": "Incorrect. The two algorithms have different access requirements, and one of them is not directly suitable for the standard linked-list structure.",
+        "d": "Incorrect. A linked list can be traversed sequentially, allowing an element to be searched for."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Let us consider a sorted array of length $N$. What would be the best time complexity of an algorithm to find a pair of numbers such that the absolute difference between them is equal to $p$, i.e., $(x,y)$ where $|x-y| = p$?",
+      "answers": {
+        "a": "$O(N)$",
+        "b": "$O(N^2)$",
+        "c": "$O(\\log N)$",
+        "d": "$O(\\log(\\log N))$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Since the array is sorted, two pointers can be maintained and moved through the array based on the current difference. Each pointer moves forward at most $N$ times, giving an overall time complexity of $O(N)$.",
+        "b": "Incorrect. Checking every possible pair would lead to this complexity, but the sorted order allows a more efficient two-pointer approach.",
+        "c": "Incorrect. Binary Search can reduce a search range, but the two-pointer approach for this problem requires scanning through the array and does not achieve logarithmic time.",
+        "d": "Incorrect. The structure of this problem does not provide a method that reduces the search space sufficiently to achieve this complexity."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "4. Binary Search is better than Linear Search for a static sorted array.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In a sorted array, Binary Search can repeatedly reduce the search space by half, giving a worst-case time complexity of $O(\\log N)$, while Linear Search has a worst-case complexity of $O(N)$.",
+        "b": "Incorrect. For a static sorted array, the ordering of elements can be exploited to reduce the search space substantially during a search."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In an array, what would be the time complexity to find the closest upper bound of a given number, where the upper bound is the smallest element greater than or equal to the given number?",
+      "answers": {
+        "a": "$O(\\log N)$",
+        "b": "$O(N \\log N)$",
+        "c": "$O(1)$",
+        "d": "$O(N)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A logarithmic search is possible when the array has the ordering required by Binary Search, but that condition is not given here.",
+        "b": "Incorrect. This complexity is associated with certain sorting or divide-and-conquer operations, but it is not necessary for a single scan of an unsorted array.",
+        "c": "Incorrect. The desired upper-bound element may occur at any position, so the array may need to be examined at multiple positions.",
+        "d": "Correct. Since the array is not specified as sorted, the elements may need to be examined one by one to determine the smallest value satisfying the upper-bound condition. Thus, the time complexity is $O(N)$."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Why can Binary Search not be directly applied to an unsorted array?",
+      "answers": {
+        "a": "Binary Search requires the array to contain unique elements.",
+        "b": "Binary Search requires the elements to be stored in contiguous memory.",
+        "c": "Binary Search relies on the ordering of elements to determine which half can be discarded.",
+        "d": "Binary Search can only be applied to arrays containing integer values."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Duplicate values do not by themselves prevent a binary-search procedure from operating on an appropriately ordered array.",
+        "b": "Incorrect. Contiguous storage is useful for efficient array indexing, but it is not the key requirement that makes the binary-search decision possible.",
+        "c": "Correct. Binary Search compares the target with a middle element and uses the ordering of the array to decide which half cannot contain the target. Without the required ordering, that decision is not valid.",
+        "d": "Incorrect. Binary Search can be applied to arrays containing other comparable data types, provided the required ordering is available."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. An unsorted array contains $N$ elements. You first sort it and then perform one Binary Search operation. Ignoring the cost of the final search, what is the main additional cost introduced by this approach?",
+      "answers": {
+        "a": "The cost of sorting the array",
+        "b": "The cost of accessing the first element",
+        "c": "The cost of comparing the target with one element",
+        "d": "No additional cost is introduced"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. An unsorted array must first be arranged into the required order before Binary Search can be used. The sorting operation introduces an additional preprocessing cost, commonly $O(N \\log N)$ for comparison-based sorting algorithms.",
+        "b": "Incorrect. Accessing an individual array element does not represent the main additional cost introduced by preparing an unsorted array for Binary Search.",
+        "c": "Incorrect. Comparing the target with an element is part of the search itself and is not the main preprocessing cost in this situation.",
+        "d": "Incorrect. Rearranging the elements into the required order requires computational work before Binary Search can be performed."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Consider an unsorted array of $N$ elements. What is the worst-case time complexity of searching for a particular element using Linear Search?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(N)$",
+        "c": "$O(\\log N)$",
+        "d": "$O(N \\log N)$"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Constant time applies when the required element can be determined after examining only a fixed number of positions, which is not guaranteed in the worst case.",
+        "b": "Correct. In the worst case, the target may be at the last position or may not be present, requiring all $N$ elements to be examined. Therefore, the time complexity is $O(N)$.",
+        "c": "Incorrect. A logarithmic reduction in the search space requires an appropriate ordering that an unsorted array does not provide.",
+        "d": "Incorrect. Linear Search does not perform a sorting operation or repeated logarithmic-level processing, so this is not its worst-case search complexity."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. An array is given as $[42, 7, 19, 3, 25]$, and the task is to determine whether the value $25$ is present. Which approach is directly suitable without first sorting the array?",
+      "answers": {
+        "a": "Linear Search",
+        "b": "Binary Search",
+        "c": "Binary Search followed by Linear Search",
+        "d": "Sorting followed by Binary Search"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Linear Search can examine the elements sequentially without requiring the array to be sorted, so it can directly search this unsorted array.",
+        "b": "Incorrect. The array does not have the ordering required for the standard Binary Search procedure.",
+        "c": "Incorrect. Adding another search method does not remove the ordering requirement of Binary Search.",
+        "d": "Incorrect. Sorting followed by Binary Search is a possible strategy when repeated searches justify the preprocessing cost, but it is not necessary for directly performing this single search on the given unsorted array."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
 }

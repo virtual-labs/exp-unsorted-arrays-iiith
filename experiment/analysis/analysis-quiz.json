@@ -1,61 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the value of base-2 logarithm of 512 i.e. log2(512)?",
-            "answers": {
-                "a": "8",
-                "b": "11",
-                "c": "9",
-                "d": "10"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "Since, 2^9 = 512, hence 9 is the result."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. Around 18 teams made it to the final round of VLead Intercollegiate Basketball Championship. If the team leaders\u2019 names are arranged in an ascending order and binary search is applied, then how many iterations are needed to find a particular team leader?",
-            "answers": {
-                "a": "At most 18",
-                "b": "At most 5",
-                "c": "At least 5",
-                "d": "At least 6"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "Since, in the worst case, floor(log(n) + 1) iterations are performed. Thus, floor(log(18) + 1) = floor(4.169 + 1) = floor(5.169) = 5"
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "3. In the best case scenario, if we perform a binary search on a sorted array of length N, how many iterations are needed to determine that an element is not present in the array?",
-            "answers": {
-                "a": "floor(log(N))",
-                "b": "ceil(log(N))",
-                "c": "ceil(log(N) + 1)",
-                "d": "floor(log(N) + 1)"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "d": "If the element is not present in the array, then it would become the worst case scenario. Hence, here the best case will be equal to the worst case, and thus floor(log(N) + 1) iterations will be required."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "4. In the best case scenario, if we perform an optimised linear search on a sorted array of length N, how many iterations are needed to determine that an element is not present in the array?",
-            "answers": {
-                "a": "N",
-                "b": "1",
-                "c": "log(N) + 1",
-                "d": "N+1"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "We can assume a best case scenario of finding an element which is smaller than the shortest element present in the array. Hence with the knowledge of the array being sorted, the modified algorithm will stop iterating after checking the first element."
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the value of the base-2 logarithm of 512, i.e. $\\log_2(512)$?",
+      "answers": {
+        "a": "8",
+        "b": "11",
+        "c": "9",
+        "d": "10"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The corresponding power of 2 would produce a value smaller than 512.",
+        "b": "Incorrect. The corresponding power of 2 would produce a value larger than 512.",
+        "c": "Correct. Since $2^9 = 512$, the value of $\\log_2(512)$ is 9.",
+        "d": "Incorrect. The tenth power of 2 is larger than 512."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Around 18 teams made it to the final round of a basketball championship. If the team leaders' names are arranged in ascending order and binary search is applied, what is the maximum number of iterations needed to find a particular team leader?",
+      "answers": {
+        "a": "At most 18",
+        "b": "At most 5",
+        "c": "At least 5",
+        "d": "At least 6"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Binary search eliminates a large portion of the remaining search space after each comparison, so it does not require checking all 18 elements in the worst case.",
+        "b": "Correct. With the usual binary-search iteration count, the maximum number of comparisons for 18 elements is $\\lfloor\\log_2(18)\\rfloor + 1 = 5$.",
+        "c": "Incorrect. The question asks for a maximum number of iterations, not a minimum number.",
+        "d": "Incorrect. The maximum number of iterations for this input size is smaller than six."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "3. For a standard binary search on a sorted array of length $N$, what is the worst-case order of the number of iterations needed to determine that an element is not present?",
+      "answers": {
+        "a": "$\\lfloor\\log_2(N)\\rfloor$",
+        "b": "$\\lceil\\log_2(N)\\rceil$",
+        "c": "$\\lceil\\log_2(N)\\rceil + 1$",
+        "d": "$\\lfloor\\log_2(N)\\rfloor + 1$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. This expression can be one comparison too small under the standard counting convention.",
+        "b": "Incorrect. The ceiling alone does not account for the final comparison that may establish that the element is absent.",
+        "c": "Incorrect. This expression is not the standard floor-based bound used by the formulation in this experiment.",
+        "d": "Correct. Under the stated standard counting convention, the worst-case number of iterations can be expressed as $\\lfloor\\log_2(N)\\rfloor + 1$."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. In the best case, if we perform an optimized linear search on a sorted array of length $N$, how many iterations are needed to determine that a searched value is not present when the value is smaller than the first element?",
+      "answers": {
+        "a": "$N$",
+        "b": "1",
+        "c": "$\\log_2(N) + 1$",
+        "d": "$N + 1$"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The ordering information allows the search to stop before examining all elements in this case.",
+        "b": "Correct. After checking the first element, the algorithm can determine that a smaller target cannot occur later in an ascending sorted array.",
+        "c": "Incorrect. The algorithm does not repeatedly halve the search space in this optimized linear-search procedure.",
+        "d": "Incorrect. The algorithm does not perform more than $N$ element checks."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In an unsorted array, why can a standard linear search require $N$ comparisons in the worst case?",
+      "answers": {
+        "a": "Because the array must first be sorted",
+        "b": "Because the search examines only the middle element",
+        "c": "Because every element is always examined twice",
+        "d": "Because the desired value may be the last element or may not exist"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Linear search does not require the array to be sorted.",
+        "b": "Incorrect. Linear search checks elements sequentially rather than restricting the search to the middle.",
+        "c": "Incorrect. A standard linear search does not need to inspect every element twice.",
+        "d": "Correct. If the value is at the last position or absent, the search may need to inspect all $N$ elements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Consider the unsorted array $A = [14, 3, 21, 8, 5]$. Using linear search from left to right, how many elements must be examined to find the value 8?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The value 8 occurs after the first two elements in the given traversal order.",
+        "b": "Incorrect. Three elements have been examined only up to the value 21.",
+        "c": "Correct. The search examines 14, 3, 21, and then 8, so four elements are examined.",
+        "d": "Incorrect. The search stops as soon as 8 is found and does not need to examine 5."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Suppose an unsorted array contains $N$ elements and a value is known to occur somewhere in the array. What is the worst-case time complexity of finding its position using linear search?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log N)$",
+        "c": "$O(N)$",
+        "d": "$O(N^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Knowing that the value exists does not reveal its position.",
+        "b": "Incorrect. Linear search does not systematically reduce the remaining candidates by a constant factor.",
+        "c": "Correct. The value may occur at the last position, requiring inspection of all $N$ elements.",
+        "d": "Incorrect. A single sequential search requires at most a linear number of comparisons."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. An unsorted array is searched for a value using linear search. If the value is found at the first position, what is the time complexity of the search in the best case?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(N)$",
+        "c": "$O(\\log N)$",
+        "d": "$O(N^2)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Only the first element needs to be examined, so the amount of work is constant.",
+        "b": "Incorrect. Examining every element is associated with the worst case, not the best case described here.",
+        "c": "Incorrect. No logarithmic reduction of the search space occurs in this best-case scenario.",
+        "d": "Incorrect. A single successful comparison does not require quadratic work."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Why can binary search be faster than linear search on a sorted array?",
+      "answers": {
+        "a": "Binary search always uses more memory",
+        "b": "Binary search removes approximately half of the remaining search space after each comparison",
+        "c": "Binary search checks every element simultaneously",
+        "d": "Binary search does not require the array to be ordered"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Memory usage is not the reason binary search reduces the number of comparisons.",
+        "b": "Correct. Binary search uses the ordering of the array to discard roughly half of the remaining candidates after each comparison.",
+        "c": "Incorrect. Binary search does not inspect all elements simultaneously.",
+        "d": "Incorrect. Standard binary search depends on the array being sorted."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }
