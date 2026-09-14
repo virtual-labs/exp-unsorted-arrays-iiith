@@ -50,25 +50,28 @@ function init() {
   document.getElementById("answer").onkeyup = function () {
     manage(this);
   };
-  document.getElementById("submit").disabled = true;
+  document.getElementById("submit").disabled = false;
   document.getElementById("submit").onclick = function () {
-    checkAnswer();
-    this.innerHTML = "Try Another!";
-    this.onclick = function () {
-      reload();
-    };
+    if (checkAnswer()) {
+      this.innerHTML = "Try Another!";
+      this.onclick = function () {
+        reload();
+      };
+    }
   };
   writeInstructionMessage(
     "Enter the order of indices (0 based indexing) the elements of the array will be compared in a binary search for the given Query element!",
   );
   chooseQueryElement();
   document.getElementById("query").value = searchArt.queryElement;
+  document.getElementById("query").readOnly = true;
 }
 function reload() {
   location.reload(true);
 }
 function getBinarySearchOrder() {
   // Set the Global start and end to represent the entire array as window
+  searchArt.midElementIndexOrder = [];
   searchArt.start = 0;
   searchArt.end = searchArt.randomNumberArray.length - 1;
 
@@ -93,18 +96,27 @@ function getBinarySearchOrder() {
 }
 function manage(txt) {
   var bt = document.getElementById("submit");
-  if (txt.value != "") {
-    bt.disabled = false;
-  } else {
-    bt.disabled = true;
-  }
+  bt.disabled = false;
 }
 function checkAnswer() {
+  const queryField = document.getElementById("query");
+  if (Number(queryField.value) !== searchArt.queryElement) {
+    writeInstructionMessage(
+      "The query element was changed. Please use the displayed query element and try again.",
+    );
+    return false;
+  }
   let answer = document.getElementById("answer").value;
   answer = answer.split(/,| /);
   answer = answer.filter(function (element) {
     return element != "";
   });
+  if (answer.length === 0) {
+    writeInstructionMessage(
+      "Please enter the binary search order before checking the answer.",
+    );
+    return false;
+  }
   console.log(answer);
   getBinarySearchOrder();
   if (answer.length != searchArt.midElementIndexOrder.length) {
@@ -126,6 +138,7 @@ function checkAnswer() {
     }
   }
   writeInstructionMessage("Correct Answer, Great Job!");
+  return true;
 }
 function chooseQueryElement() {
   if (getRandomInt(5)) {
