@@ -1,76 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the prerequisite to perform Binary Search?",
-            "answers": {
-                "a": "The values in the array have a maximum bound value they can take",
-                "b": "Array must be sorted either in ascending or descending order",
-                "c": "Array must be broken into sub-arrays",
-                "d": "None of the above"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "There is no need of having any upper limit for the values before performing binary search.",
-                "b": "In order to perform a binary search, the array must be sorted."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. Binary Search is an example of _______ algorithm.",
-            "answers": {
-                "a": "Greedy",
-                "b": "Dynamic Programming",
-                "c": "Backtracking",
-                "d": "None of the above"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "d": "Binary search is just an optimization over bruteforce method which exploits ordering in an array. This optimization is done by following the principles of divide and conquer where we are reducing the size of the set to search in, in every iteration."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. Let us assume an array [1,23,145,178,1203]. How many iterations are needed to find 23? [Assuming we are considering floor of values for floating point values, and index starting from 1]",
-            "answers": {
-                "a": "3",
-                "b": "4",
-                "c": "2",
-                "d": "5"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "In the first iteration, element at index = 3 (i.e. 145) will be checked, then element at index = 1 (i.e. 1) will be checked, and at last, element at index = 2 (i.e. 23) will be checked and will be found."
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "4. Let us assume an array [11, 33, 145, 1294, 1356, 1450, 3300, 4500, 6000, 8000, 9000]. Let us search for 4500 using binary search. What would be the mid values at the second and third iteration respectively? [Assuming we are considering floor of values for floating point values, and index starting from 1]",
-            "answers": {
-                "a": "1450 and 6000",
-                "b": "6000 and 3300",
-                "c": "6000 and 4500",
-                "d": "1450 and 4500"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "In the first iteration, 1450 will be the middlemost value, then in the second iteration, 6000 will be the middlemost value. In the third iteration, 3300 will be the middlemost value."
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "5. What is the space complexity of binary search implemented using recursion?",
-            "answers": {
-                "a": "O(1)",
-                "b": "O(N)",
-                "c": "O(N log N)",
-                "d": "O(log N)"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "d": "Using recursion, at max log N stack frames would be formed in the memory, in the worst case."
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the prerequisite for performing Binary Search on an array?",
+      "answers": {
+        "a": "The values in the array must have a fixed maximum bound",
+        "b": "The array must be sorted in ascending or descending order",
+        "c": "The array must first be divided into manually created subarrays",
+        "d": "The array must contain only unique values"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Binary search does not require the values to have a particular maximum bound.",
+        "b": "Correct. Binary search uses the ordering of the elements to determine which half of the remaining array can be discarded.",
+        "c": "Incorrect. Binary search performs the division of the search range conceptually during the algorithm; manually creating subarrays is not required.",
+        "d": "Incorrect. Duplicate values do not prevent binary search from being performed, although they can affect which occurrence is returned."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Binary Search is an example of which type of algorithm?",
+      "answers": {
+        "a": "Greedy",
+        "b": "Dynamic Programming",
+        "c": "Backtracking",
+        "d": "Divide and Conquer"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Binary search does not construct a solution by repeatedly making locally optimal choices.",
+        "b": "Incorrect. Binary search does not solve overlapping subproblems using stored solutions.",
+        "c": "Incorrect. Binary search does not explore alternatives by backtracking from unsuccessful choices.",
+        "d": "Correct. Binary search follows the divide-and-conquer principle by repeatedly reducing the search range to one half."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Let us assume the sorted array [1, 23, 145, 178, 1203]. How many iterations are needed to find 23 using binary search? Assume the index starts from 1 and the middle index is obtained by taking the floor of the midpoint.",
+      "answers": {
+        "a": "3",
+        "b": "4",
+        "c": "2",
+        "d": "5"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The first middle element is 145 at index 3, then 1 at index 1, and finally 23 at index 2, so three iterations are required.",
+        "b": "Incorrect. The search finds 23 before requiring four comparisons.",
+        "c": "Incorrect. Two iterations are not sufficient for the sequence of middle elements in this array.",
+        "d": "Incorrect. The search terminates before all five elements are examined."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "4. Let us assume the sorted array [11, 33, 145, 1294, 1356, 1450, 3300, 4500, 6000, 8000, 9000]. Let us search for 4500 using binary search. What would be the middle values at the second and third iterations respectively? Assume the middle index is obtained by taking the floor of the midpoint and the index starts from 1.",
+      "answers": {
+        "a": "1450 and 6000",
+        "b": "6000 and 3300",
+        "c": "6000 and 4500",
+        "d": "1450 and 4500"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. These values do not occur as the middle values in the second and third search ranges.",
+        "b": "Correct. The first middle value is 1450. Since 4500 is larger, the next range has 6000 as its middle value; the following range has 3300 as its middle value.",
+        "c": "Incorrect. Although 6000 is the second middle value, 4500 is not the third middle value because the third search range still contains values below 4500.",
+        "d": "Incorrect. The first middle value is not relevant to the requested second and third iterations, and 1450 is not the second middle value."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "5. What is the space complexity of binary search implemented using recursion, considering the recursive call stack?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(N)$",
+        "c": "$O(N \\log N)$",
+        "d": "$O(\\log N)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Recursive calls create additional stack frames as the search range becomes smaller.",
+        "b": "Incorrect. The recursive depth grows logarithmically rather than linearly with the array size.",
+        "c": "Incorrect. Binary search does not create $O(N \\log N)$ recursive stack space.",
+        "d": "Correct. Each recursive call roughly halves the search range, resulting in a recursion depth of $O(\\log N)$."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. In binary search, what happens to the search range after comparing the target with the middle element when the target is smaller than the middle element?",
+      "answers": {
+        "a": "The entire array is searched again",
+        "b": "The right half of the current search range is discarded",
+        "c": "The left half of the current search range is discarded",
+        "d": "The array must be sorted again"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Binary search uses the comparison to eliminate part of the current search range.",
+        "b": "Correct. If the target is smaller than the middle element in an ascending array, all elements to the right of the middle can be discarded.",
+        "c": "Incorrect. The target being smaller means the relevant portion is on the left side.",
+        "d": "Incorrect. The array remains sorted; no additional sorting is required during the search."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. What is the worst-case time complexity of binary search on a sorted array containing $N$ elements?",
+      "answers": {
+        "a": "$O(N)$",
+        "b": "$O(N^2)$",
+        "c": "$O(1)$",
+        "d": "$O(\\log N)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Binary search does not normally inspect all $N$ elements in the worst case.",
+        "b": "Incorrect. Binary search reduces the search range rather than performing nested linear traversals.",
+        "c": "Incorrect. The number of comparisons increases as the array size increases.",
+        "d": "Correct. The search range is approximately halved at every iteration, resulting in $O(\\log N)$ worst-case time."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Consider the sorted array [2, 5, 8, 12, 16, 20, 25]. Which element is examined first by a standard binary search?",
+      "answers": {
+        "a": "2",
+        "b": "8",
+        "c": "12",
+        "d": "20"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The first element is not the middle element of the seven-element array.",
+        "b": "Incorrect. The value 8 is before the middle position.",
+        "c": "Correct. With seven elements, the middle position is the fourth position, which contains 12.",
+        "d": "Incorrect. The value 20 is after the middle position."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. If a binary search is applied to a sorted array and the target is equal to the middle element, what should the algorithm do?",
+      "answers": {
+        "a": "Continue searching the left half",
+        "b": "Continue searching the right half",
+        "c": "Restart the search from the first element",
+        "d": "Report that the target has been found"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. There is no need to search the left portion when the target already matches the middle element.",
+        "b": "Incorrect. There is no need to search the right portion when the target already matches the middle element.",
+        "c": "Incorrect. Restarting would perform unnecessary comparisons.",
+        "d": "Correct. Equality with the middle element means the target has been found."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
 }
