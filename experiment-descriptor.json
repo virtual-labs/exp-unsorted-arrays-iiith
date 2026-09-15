@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "Unsorted Arrays vs Binary Search",
   "basedir": ".",
+  "LaTeXinMD": "true",
   "code-assessment": {
     "include": true,
     "languages": ["javascript"],
@@ -40,8 +41,8 @@
         {
           "unit-type": "aim"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
@@ -49,20 +50,20 @@
           "target": "basic-concept.html"
         },
         {
-      "unit-type": "task",
-      "label": "Algorithm",
-      "content-type": "video",
-      "source": "linear-search-algorithm.md",
-      "target": "linear-search-algorithm.html"
-     },
-      {
+          "unit-type": "task",
+          "label": "Algorithm",
+          "content-type": "video",
+          "source": "linear-search-algorithm.md",
+          "target": "linear-search-algorithm.html"
+        },
+        {
           "unit-type": "task",
           "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/linear_search_demo.html",
           "target": "linear_search_demo.html"
-       },
-      {
+        },
+        {
           "unit-type": "task",
           "label": "Quiz",
           "content-type": "assesment",
@@ -79,7 +80,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Concept",
@@ -94,15 +95,15 @@
           "source": "binary-search-algorithm.md",
           "target": "binary-search-algorithm.html"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/binary_search_demo.html",
           "target": "binary_search_demo.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Practice",
           "content-type": "simulation",
@@ -117,15 +118,15 @@
           "target": "binary_search_exercise.html"
         },
         {
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "binary-search-quiz.json",
-         "target": "binary-search-quiz.html"
-       }
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "binary-search-quiz.json",
+          "target": "binary-search-quiz.html"
+        }
       ]
-     },
-     {
+    },
+    {
       "unit-type": "lu",
       "label": "Analysis",
       "basedir": "analysis",
@@ -133,7 +134,7 @@
         {
           "unit-type": "aim"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Overview",
           "content-type": "video",
@@ -156,14 +157,14 @@
         }
       ]
     },
-    
+
     {
       "unit-type": "task",
       "label": "Posttest",
       "content-type": "assesment",
       "source": "posttest.json",
       "target": "posttest.html"
-    },       
+    },
     {
       "unit-type": "task",
       "label": "Further Readings/References",
