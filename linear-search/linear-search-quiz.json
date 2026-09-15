@@ -1,0 +1,154 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How is a linear search performed?",
+      "answers": {
+        "a": "An element is copied into another array until the required element is found",
+        "b": "The array is broken into smaller subarrays and the elements are searched recursively",
+        "c": "The array is traversed sequentially from one end until the required element is found or the array ends",
+        "d": "The array is sorted first and then only the middle element is checked"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Linear search does not require creating another array.",
+        "b": "Incorrect. Dividing the array into smaller subarrays is not the defining procedure of linear search.",
+        "c": "Correct. Linear search checks the elements sequentially, usually from the first element toward the last, until the target is found or no elements remain.",
+        "d": "Incorrect. Linear search does not require sorting the array or checking only its middle element."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In the worst case, what is the time complexity of linear search on an array of size $N$?",
+      "answers": {
+        "a": "$O(\\log N)$",
+        "b": "$O(1)$",
+        "c": "$O(N)$",
+        "d": "$O(N \\log N)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Linear search does not repeatedly reduce the search space by a constant factor.",
+        "b": "Incorrect. The search may need to inspect many elements before terminating.",
+        "c": "Correct. In the worst case, all $N$ elements may need to be checked, giving $O(N)$ time.",
+        "d": "Incorrect. A single sequential traversal does not require $O(N \\log N)$ operations."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In the best case, what is the time complexity of linear search?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(N \\log N)$",
+        "c": "$O(\\log N)$",
+        "d": "$O(N)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. If the required element is the first element examined, only one comparison is required, giving $O(1)$ time.",
+        "b": "Incorrect. The best case requires only a constant number of operations.",
+        "c": "Incorrect. Linear search does not halve the search space in the best case.",
+        "d": "Incorrect. Checking all $N$ elements corresponds to the worst case rather than the best case."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. How is linear search disadvantageous compared with search methods that exploit additional structure such as sorted order?",
+      "answers": {
+        "a": "It may require more comparisons to find an element",
+        "b": "It always requires additional memory proportional to the array size",
+        "c": "It is difficult to implement because it requires recursion",
+        "d": "It cannot be used on an unsorted array"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Linear search may need to inspect many elements, whereas some algorithms can use additional structure to reduce the number of comparisons.",
+        "b": "Incorrect. A standard linear search can be performed using constant auxiliary space.",
+        "c": "Incorrect. Linear search can be implemented simply with an iterative loop and a comparison.",
+        "d": "Incorrect. Linear search is particularly useful when the array is unsorted."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. For an ordered linear search, $O(N)$ is the worst-case time complexity. An ordered linear search is a linear search on an array that is already sorted.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Even though a sorted array can allow the search to terminate early in some cases, the worst case can still require examining all $N$ elements.",
+        "b": "Incorrect. Sorting can improve some cases of linear search, but it does not eliminate the possibility of a linear worst case."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. What is the best-case number of comparisons for a linear search when the target is the first element of the array?",
+      "answers": {
+        "a": "1",
+        "b": "$\\log_2(N)$",
+        "c": "$N$",
+        "d": "$N - 1$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The first comparison finds the target immediately.",
+        "b": "Incorrect. Linear search does not use logarithmic reduction of the search range.",
+        "c": "Incorrect. Checking all $N$ elements is unnecessary when the first element matches.",
+        "d": "Incorrect. The search stops at the first element and does not examine the remaining elements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Consider the array [7, 14, 3, 25, 10]. If linear search is used to find 25 from left to right, how many elements are examined?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The first two examined values are 7 and 14, neither of which is 25.",
+        "b": "Incorrect. The first three values are 7, 14, and 3, so 25 has not yet been found.",
+        "c": "Correct. The search checks 7, 14, 3, and then 25, so four elements are examined.",
+        "d": "Incorrect. The search stops when 25 is found and does not need to examine 10."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Which statement about linear search on an unsorted array is correct?",
+      "answers": {
+        "a": "The array must be sorted before linear search",
+        "b": "Linear search can be used without sorting the array",
+        "c": "Linear search always takes $O(1)$ time",
+        "d": "Linear search can inspect only the middle element"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Linear search does not depend on the elements being ordered.",
+        "b": "Correct. Linear search can examine the elements sequentially regardless of their ordering.",
+        "c": "Incorrect. Although its best case is $O(1)$, its worst case is $O(N)$.",
+        "d": "Incorrect. Linear search may inspect many positions rather than only the middle."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. Suppose an unsorted array contains $N$ elements and the target is not present. What is the number of elements that a standard linear search may need to examine?",
+      "answers": {
+        "a": "Exactly 1",
+        "b": "At most $\\log_2(N)$",
+        "c": "At most $N$",
+        "d": "Exactly $N - 1$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. If the target is absent, the search cannot normally stop after checking only one element.",
+        "b": "Incorrect. Linear search does not have a logarithmic worst-case bound.",
+        "c": "Correct. When the target is absent, every one of the $N$ elements may need to be examined.",
+        "d": "Incorrect. The final element also needs to be checked before the search can conclude that the target is absent."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

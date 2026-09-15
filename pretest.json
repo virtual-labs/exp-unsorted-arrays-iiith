@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How do you describe an array?",
+      "answers": {
+        "a": "A data structure in which accessing any element always takes linear time",
+        "b": "A data structure containing elements of the same type stored in contiguous memory locations",
+        "c": "A container that stores only unique elements of the same type",
+        "d": "A data structure whose elements are always stored at unrelated memory locations"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Direct access to an array element using its index does not require traversing all preceding elements.",
+        "b": "Correct. An array stores elements of the same data type in contiguous memory locations, allowing direct access using an index.",
+        "c": "Incorrect. An array can contain duplicate values; uniqueness is not a property of arrays.",
+        "d": "Incorrect. The elements of a conventional array are stored in contiguous memory locations."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the time complexity of traversing through all the elements in an array of size $N$?",
+      "answers": {
+        "a": "$O(N^2)$",
+        "b": "$O(1)$",
+        "c": "$O(N)$",
+        "d": "$O(\\log N)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A single traversal visits each element once rather than performing a nested set of $N$ operations.",
+        "b": "Incorrect. The amount of work grows with the number of elements that must be visited.",
+        "c": "Correct. Traversing an array of size $N$ requires visiting all $N$ elements once, giving a time complexity of $O(N)$.",
+        "d": "Incorrect. Logarithmic time would require reducing the search space by a constant factor at each step, which a complete traversal does not do."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Let us consider the following code:<pre><code>int a = 0, b[N];<br>for (i = 0; i < M; i++) {<br>    a += i;<br>}<br>for (i = 0; i < N; i++) {<br>    scanf(\"%d\", &b[i]);<br>    a += b[i];<br>}</code></pre>What are the space and time complexities of the above code?",
+      "answers": {
+        "a": "Space: $O(M+N)$, Time: $O(M+N)$",
+        "b": "Space: $O(N)$, Time: $O(MN)$",
+        "c": "Space: $O(M)$, Time: $O(M)$",
+        "d": "Space: $O(N)$, Time: $O(M+N)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The first loop does not allocate an additional data structure of size $M$; it only performs repeated operations.",
+        "b": "Incorrect. The loops execute sequentially rather than being nested, so their running times do not multiply.",
+        "c": "Incorrect. The array $b$ requires space proportional to $N$, and the second loop contributes to the running time.",
+        "d": "Correct. The array $b$ requires $O(N)$ space, while the two sequential loops take $O(M)$ and $O(N)$ time, giving $O(M+N)$ overall time."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "4. Let us consider the following four arrays:<br>A = [9, 5, 11, 25, 7, 35]<br>B = [1, 2, 9, 15, 27]<br>C = [29, 27, 27, 18, 4, 2]<br>D = [1, 8, 2, 5, 6, 7, 8, 9]<br>Which of the arrays are sorted in either ascending or descending order?",
+      "answers": {
+        "a": "A and C",
+        "b": "B and D",
+        "c": "B and C",
+        "d": "A and D"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Array A is not sorted because its elements do not consistently increase or decrease.",
+        "b": "Incorrect. Array D is not sorted because the value 8 is followed by 2.",
+        "c": "Correct. B is sorted in ascending order and C is sorted in descending order, allowing equal adjacent values in the non-increasing sequence.",
+        "d": "Incorrect. Neither A nor D maintains a consistent ascending or descending order."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. If, for large inputs, algorithm X is a better choice than algorithm Y, then which statement best describes their asymptotic efficiency?",
+      "answers": {
+        "a": "Y is asymptotically more efficient than X",
+        "b": "X is asymptotically more efficient than Y",
+        "c": "X and Y must have exactly the same asymptotic complexity",
+        "d": "The asymptotic efficiency of X and Y cannot be compared"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This statement contradicts the condition that X is the better choice for large inputs.",
+        "b": "Correct. If X is preferred for sufficiently large inputs because of its growth rate, X is asymptotically more efficient than Y.",
+        "c": "Incorrect. Two algorithms with the same asymptotic complexity can still differ in constants, but having the same complexity is not required for X to be the better choice.",
+        "d": "Incorrect. The statement about large inputs can be used to compare the asymptotic growth of the algorithms."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. In an unsorted array, which search technique can be used without first rearranging the elements?",
+      "answers": {
+        "a": "Linear search",
+        "b": "Binary search only",
+        "c": "Interpolation search only",
+        "d": "No search technique can be used"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Linear search can inspect elements one by one and does not require the array to be sorted.",
+        "b": "Incorrect. The standard binary search procedure relies on the elements being ordered.",
+        "c": "Incorrect. Interpolation search also relies on an ordered array and an appropriate distribution of values.",
+        "d": "Incorrect. An unsorted array can still be searched using methods that do not require ordering."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. What is the worst-case time complexity of searching for a particular value in an unsorted array of size $N$ using linear search?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log N)$",
+        "c": "$O(N)$",
+        "d": "$O(N^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. In the worst case, the search may need to inspect many elements.",
+        "b": "Incorrect. Linear search does not reduce the remaining search space logarithmically.",
+        "c": "Correct. In the worst case, every element may need to be checked, giving $O(N)$ time.",
+        "d": "Incorrect. A single linear traversal does not require a quadratic number of comparisons."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Which property of an array allows direct access to an element using its index?",
+      "answers": {
+        "a": "The elements are necessarily sorted",
+        "b": "The elements are stored in contiguous memory locations",
+        "c": "The elements are unique",
+        "d": "The array is always dynamically resized"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An array can provide direct indexed access even when its elements are completely unsorted.",
+        "b": "Correct. Contiguous storage allows the address of an element to be calculated directly from its index and the element size.",
+        "c": "Incorrect. Duplicate values do not prevent indexed access.",
+        "d": "Incorrect. Dynamic resizing is not the reason array indexing provides direct access."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. An unsorted array contains $N$ elements. Which statement about finding whether a particular value exists in the array is correct when no additional information about the data is available?",
+      "answers": {
+        "a": "The value can always be found in $O(1)$ time",
+        "b": "The value can always be found in $O(\\log N)$ time",
+        "c": "A search may need to inspect all $N$ elements",
+        "d": "The array must be sorted before any search can be performed"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Without an additional indexing structure or other information, the position of the value cannot generally be determined immediately.",
+        "b": "Incorrect. Logarithmic search requires useful ordering or another structure that reduces the search space.",
+        "c": "Correct. In an unsorted array, the desired value may be the last element or may be absent, so all $N$ elements may need to be inspected.",
+        "d": "Incorrect. Searching is possible without sorting, although the search may require linear time."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

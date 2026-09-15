@@ -1,0 +1,908 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IIITH',
+        'phase': 'Testing',
+        'expName': 'UNSORTED ARRAYS VS BINARY SEARCH',
+        'expShortName': 'unsorted-arrays'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="unsorted-arrays">
+    	<meta name="developer-institute" content="IIITH">
+    	<meta name="learning-unit" content="Analysis">
+    	<meta name="task-name" content="Quiz">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="../assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="../assets/css/toast.css">
+    <link rel="stylesheet" href="../assets/katex_assets/katex.min.css">
+    
+    <script src="../assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="../assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="unsorted-arrays" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] UNSORTED ARRAYS VS BINARY SEARCH" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;UNSORTED ARRAYS VS BINARY SEARCH&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="../assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../overview.html" class="p-2 ">
+                                      Overview
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../recap.html" class="p-2 ">
+                                      Recap
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      
+                                      <a data-bs-toggle="collapse" href="#t-linear-search" class="p-2 ">
+                                      Linear Search
+                                      </a>
+                                      <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-linear-search" aria-controls="linear-search"> 
+                                          <i class="fa fa-angle-down"></i>
+                                      </button>
+                                  </div>
+                                  <div id="t-linear-search" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                          <a href="../linear-search/index.html" class="py-1 "> Aim </a>
+                                          <a href="../linear-search/basic-concept.html" class="py-1 "> Concept </a>
+                                          <a href="../linear-search/linear-search-algorithm.html" class="py-1 "> Algorithm </a>
+                                          <a href="../linear-search/linear_search_demo.html" class="py-1 "> Demo </a>
+                                          <a href="../linear-search/linear-search-quiz.html" class="py-1 "> Quiz </a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      
+                                      <a data-bs-toggle="collapse" href="#t-binary-search" class="p-2 ">
+                                      Binary Search
+                                      </a>
+                                      <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-binary-search" aria-controls="binary-search"> 
+                                          <i class="fa fa-angle-down"></i>
+                                      </button>
+                                  </div>
+                                  <div id="t-binary-search" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                          <a href="../binary-search/index.html" class="py-1 "> Aim </a>
+                                          <a href="../binary-search/basic-concept-binary-search.html" class="py-1 "> Concept </a>
+                                          <a href="../binary-search/binary-search-algorithm.html" class="py-1 "> Algorithm </a>
+                                          <a href="../binary-search/binary_search_demo.html" class="py-1 "> Demo </a>
+                                          <a href="../binary-search/binary_search_practice.html" class="py-1 "> Practice </a>
+                                          <a href="../binary-search/binary_search_exercise.html" class="py-1 "> Exercise </a>
+                                          <a href="../binary-search/binary-search-quiz.html" class="py-1 "> Quiz </a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../code-assessment.html" class="p-2 ">
+                                      Code Assessment
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      
+                                      <a data-bs-toggle="collapse" href="#t-analysis" class="p-2 ">
+                                      Analysis
+                                      </a>
+                                      <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-analysis" aria-controls="analysis"> 
+                                          <i class="fa fa-angle-down"></i>
+                                      </button>
+                                  </div>
+                                  <div id="t-analysis" class="show">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                          <a href="index.html" class="py-1 "> Aim </a>
+                                          <a href="overview.html" class="py-1 "> Overview </a>
+                                          <a href="time-and-space-complexity.html" class="py-1 "> Time and Space Complexity </a>
+                                          <a href="analysis-quiz.html" class="py-1  current-item "> Quiz </a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../further-reading-and-references.html" class="p-2 ">
+                                      Further Readings/References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="../feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../overview.html" class="p-2 ">
+                        Overview
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../recap.html" class="p-2 ">
+                        Recap
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        
+                        <a data-bs-toggle="collapse" href="#t-linear-search" class="p-2 ">
+                        Linear Search
+                        </a>
+                        <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-linear-search" aria-controls="linear-search"> 
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div id="t-linear-search" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                            <a href="../linear-search/index.html" class="py-1 "> Aim </a>
+                            <a href="../linear-search/basic-concept.html" class="py-1 "> Concept </a>
+                            <a href="../linear-search/linear-search-algorithm.html" class="py-1 "> Algorithm </a>
+                            <a href="../linear-search/linear_search_demo.html" class="py-1 "> Demo </a>
+                            <a href="../linear-search/linear-search-quiz.html" class="py-1 "> Quiz </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        
+                        <a data-bs-toggle="collapse" href="#t-binary-search" class="p-2 ">
+                        Binary Search
+                        </a>
+                        <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-binary-search" aria-controls="binary-search"> 
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div id="t-binary-search" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                            <a href="../binary-search/index.html" class="py-1 "> Aim </a>
+                            <a href="../binary-search/basic-concept-binary-search.html" class="py-1 "> Concept </a>
+                            <a href="../binary-search/binary-search-algorithm.html" class="py-1 "> Algorithm </a>
+                            <a href="../binary-search/binary_search_demo.html" class="py-1 "> Demo </a>
+                            <a href="../binary-search/binary_search_practice.html" class="py-1 "> Practice </a>
+                            <a href="../binary-search/binary_search_exercise.html" class="py-1 "> Exercise </a>
+                            <a href="../binary-search/binary-search-quiz.html" class="py-1 "> Quiz </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../code-assessment.html" class="p-2 ">
+                        Code Assessment
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        
+                        <a data-bs-toggle="collapse" href="#t-analysis" class="p-2 ">
+                        Analysis
+                        </a>
+                        <button class="btn btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#t-analysis" aria-controls="analysis"> 
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div id="t-analysis" class="show">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                            <a href="index.html" class="py-1 "> Aim </a>
+                            <a href="overview.html" class="py-1 "> Overview </a>
+                            <a href="time-and-space-complexity.html" class="py-1 "> Time and Space Complexity </a>
+                            <a href="analysis-quiz.html" class="py-1  current-item "> Quiz </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../further-reading-and-references.html" class="p-2 ">
+                        Further Readings/References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="../feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="unsorted-arrays-vs-binary-search">Unsorted Arrays vs Binary Search</h2>
+          
+            </div>
+                  <div id="difficulty-container" style="border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin: 0" class="row">
+                    <div id="difficulty-label" class="col-12 col-md-3" style="display:none"><strong>Choose difficulty: </strong></div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="beginner" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Beginner</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="intermediate" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Intermediate</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="advanced" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Advanced</strong>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div id="quiz" class="versiontrue" style="margin-top: 1rem">
+                
+                
+                  <div class="question beginner">
+                    1. What is the value of the base-2 logarithm of 512, i.e. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mn>512</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\log_2(512)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">512</span><span class="mclose">)</span></span></span></span>?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer0a">
+                      <label>
+                        <input type="radio" name="question0" value="a">
+                        a: 8
+                      </label>
+                      <a href="#" id="explanation0a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0b">
+                      <label>
+                        <input type="radio" name="question0" value="b">
+                        b: 11
+                      </label>
+                      <a href="#" id="explanation0b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0c">
+                      <label>
+                        <input type="radio" name="question0" value="c">
+                        c: 9
+                      </label>
+                      <a href="#" id="explanation0c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0d">
+                      <label>
+                        <input type="radio" name="question0" value="d">
+                        d: 10
+                      </label>
+                      <a href="#" id="explanation0d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    2. Around 18 teams made it to the final round of a basketball championship. If the team leaders' names are arranged in ascending order and binary search is applied, what is the maximum number of iterations needed to find a particular team leader?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer1a">
+                      <label>
+                        <input type="radio" name="question1" value="a">
+                        a: At most 18
+                      </label>
+                      <a href="#" id="explanation1a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1b">
+                      <label>
+                        <input type="radio" name="question1" value="b">
+                        b: At most 5
+                      </label>
+                      <a href="#" id="explanation1b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1c">
+                      <label>
+                        <input type="radio" name="question1" value="c">
+                        c: At least 5
+                      </label>
+                      <a href="#" id="explanation1c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1d">
+                      <label>
+                        <input type="radio" name="question1" value="d">
+                        d: At least 6
+                      </label>
+                      <a href="#" id="explanation1d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    3. For a standard binary search on a sorted array of length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>, what is the worst-case order of the number of iterations needed to determine that an element is not present?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer2a">
+                      <label>
+                        <input type="radio" name="question2" value="a">
+                        a: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor\log_2(N)\rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)⌋</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation2a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2b">
+                      <label>
+                        <input type="radio" name="question2" value="b">
+                        b: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌈</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">\lceil\log_2(N)\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌈</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)⌉</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation2b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2c">
+                      <label>
+                        <input type="radio" name="question2" value="c">
+                        c: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌈</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">⌉</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lceil\log_2(N)\rceil + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌈</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)⌉</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation2c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2d">
+                      <label>
+                        <input type="radio" name="question2" value="d">
+                        d: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">⌋</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lfloor\log_2(N)\rfloor + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)⌋</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation2d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    4. In the best case, if we perform an optimized linear search on a sorted array of length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>, how many iterations are needed to determine that a searched value is not present when the value is smaller than the first element?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer3a">
+                      <label>
+                        <input type="radio" name="question3" value="a">
+                        a: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation3a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3b">
+                      <label>
+                        <input type="radio" name="question3" value="b">
+                        b: 1
+                      </label>
+                      <a href="#" id="explanation3b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3c">
+                      <label>
+                        <input type="radio" name="question3" value="c">
+                        c: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\log_2(N) + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation3c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3d">
+                      <label>
+                        <input type="radio" name="question3" value="d">
+                        d: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation3d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    5. In an unsorted array, why can a standard linear search require <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> comparisons in the worst case?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer4a">
+                      <label>
+                        <input type="radio" name="question4" value="a">
+                        a: Because the array must first be sorted
+                      </label>
+                      <a href="#" id="explanation4a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4b">
+                      <label>
+                        <input type="radio" name="question4" value="b">
+                        b: Because the search examines only the middle element
+                      </label>
+                      <a href="#" id="explanation4b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4c">
+                      <label>
+                        <input type="radio" name="question4" value="c">
+                        c: Because every element is always examined twice
+                      </label>
+                      <a href="#" id="explanation4c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4d">
+                      <label>
+                        <input type="radio" name="question4" value="d">
+                        d: Because the desired value may be the last element or may not exist
+                      </label>
+                      <a href="#" id="explanation4d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    6. Consider the unsorted array <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">[</mo><mn>14</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>21</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">A = [14, 3, 21, 8, 5]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">14</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">21</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mclose">]</span></span></span></span>. Using linear search from left to right, how many elements must be examined to find the value 8?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer5a">
+                      <label>
+                        <input type="radio" name="question5" value="a">
+                        a: 2
+                      </label>
+                      <a href="#" id="explanation5a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5b">
+                      <label>
+                        <input type="radio" name="question5" value="b">
+                        b: 3
+                      </label>
+                      <a href="#" id="explanation5b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5c">
+                      <label>
+                        <input type="radio" name="question5" value="c">
+                        c: 4
+                      </label>
+                      <a href="#" id="explanation5c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5d">
+                      <label>
+                        <input type="radio" name="question5" value="d">
+                        d: 5
+                      </label>
+                      <a href="#" id="explanation5d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    7. Suppose an unsorted array contains <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> elements and a value is known to occur somewhere in the array. What is the worst-case time complexity of finding its position using linear search?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer6a">
+                      <label>
+                        <input type="radio" name="question6" value="a">
+                        a: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation6a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6b">
+                      <label>
+                        <input type="radio" name="question6" value="b">
+                        b: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation6b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6c">
+                      <label>
+                        <input type="radio" name="question6" value="c">
+                        c: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation6c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6d">
+                      <label>
+                        <input type="radio" name="question6" value="d">
+                        d: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation6d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    8. An unsorted array is searched for a value using linear search. If the value is found at the first position, what is the time complexity of the search in the best case?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer7a">
+                      <label>
+                        <input type="radio" name="question7" value="a">
+                        a: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation7a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7b">
+                      <label>
+                        <input type="radio" name="question7" value="b">
+                        b: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation7b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7c">
+                      <label>
+                        <input type="radio" name="question7" value="c">
+                        c: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation7c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7d">
+                      <label>
+                        <input type="radio" name="question7" value="d">
+                        d: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>
+                      </label>
+                      <a href="#" id="explanation7d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    9. Why can binary search be faster than linear search on a sorted array?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer8a">
+                      <label>
+                        <input type="radio" name="question8" value="a">
+                        a: Binary search always uses more memory
+                      </label>
+                      <a href="#" id="explanation8a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8b">
+                      <label>
+                        <input type="radio" name="question8" value="b">
+                        b: Binary search removes approximately half of the remaining search space after each comparison
+                      </label>
+                      <a href="#" id="explanation8b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8c">
+                      <label>
+                        <input type="radio" name="question8" value="c">
+                        c: Binary search checks every element simultaneously
+                      </label>
+                      <a href="#" id="explanation8c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8d">
+                      <label>
+                        <input type="radio" name="question8" value="d">
+                        d: Binary search does not require the array to be ordered
+                      </label>
+                      <a href="#" id="explanation8d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+               </div>
+                <button id="submit" class="btn btn-primary">Submit Quiz</button>
+                <div id="results"></div>
+          </div>
+            
+            <script>
+              const myQuestions = [{"question":"1. What is the value of the base-2 logarithm of 512, i.e. <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mn>512</mn><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">\\log_2(512)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord\">512</span><span class=\"mclose\">)</span></span></span></span>?","answers":{"a":"8","b":"11","c":"9","d":"10"},"correctAnswer":"c","explanations":{"a":"Incorrect. The corresponding power of 2 would produce a value smaller than 512.","b":"Incorrect. The corresponding power of 2 would produce a value larger than 512.","c":"Correct. Since <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msup><mn>2</mn><mn>9</mn></msup><mo>=</mo><mn>512</mn></mrow><annotation encoding=\"application/x-tex\">2^9 = 512</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8141em;\"></span><span class=\"mord\"><span class=\"mord\">2</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.8141em;\"><span style=\"top:-3.063em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">9</span></span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">512</span></span></span></span>, the value of <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mn>512</mn><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">\\log_2(512)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord\">512</span><span class=\"mclose\">)</span></span></span></span> is 9.","d":"Incorrect. The tenth power of 2 is larger than 512."},"difficulty":"beginner"},{"question":"2. Around 18 teams made it to the final round of a basketball championship. If the team leaders' names are arranged in ascending order and binary search is applied, what is the maximum number of iterations needed to find a particular team leader?","answers":{"a":"At most 18","b":"At most 5","c":"At least 5","d":"At least 6"},"correctAnswer":"b","explanations":{"a":"Incorrect. Binary search eliminates a large portion of the remaining search space after each comparison, so it does not require checking all 18 elements in the worst case.","b":"Correct. With the usual binary-search iteration count, the maximum number of comparisons for 18 elements is <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mn>18</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌋</mo><mo>+</mo><mn>1</mn><mo>=</mo><mn>5</mn></mrow><annotation encoding=\"application/x-tex\">\\lfloor\\log_2(18)\\rfloor + 1 = 5</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌊</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord\">18</span><span class=\"mclose\">)⌋</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">5</span></span></span></span>.","c":"Incorrect. The question asks for a maximum number of iterations, not a minimum number.","d":"Incorrect. The maximum number of iterations for this input size is smaller than six."},"difficulty":"advanced"},{"question":"3. For a standard binary search on a sorted array of length <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span>, what is the worst-case order of the number of iterations needed to determine that an element is not present?","answers":{"a":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌋</mo></mrow><annotation encoding=\"application/x-tex\">\\lfloor\\log_2(N)\\rfloor</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌊</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)⌋</span></span></span></span>","b":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌈</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌉</mo></mrow><annotation encoding=\"application/x-tex\">\\lceil\\log_2(N)\\rceil</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌈</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)⌉</span></span></span></span>","c":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌈</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌉</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding=\"application/x-tex\">\\lceil\\log_2(N)\\rceil + 1</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌈</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)⌉</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span></span></span></span>","d":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌋</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding=\"application/x-tex\">\\lfloor\\log_2(N)\\rfloor + 1</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌊</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)⌋</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span></span></span></span>"},"correctAnswer":"d","explanations":{"a":"Incorrect. This expression can be one comparison too small under the standard counting convention.","b":"Incorrect. The ceiling alone does not account for the final comparison that may establish that the element is absent.","c":"Incorrect. This expression is not the standard floor-based bound used by the formulation in this experiment.","d":"Correct. Under the stated standard counting convention, the worst-case number of iterations can be expressed as <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">⌊</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">⌋</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding=\"application/x-tex\">\\lfloor\\log_2(N)\\rfloor + 1</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">⌊</span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)⌋</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span></span></span></span>."},"difficulty":"intermediate"},{"question":"4. In the best case, if we perform an optimized linear search on a sorted array of length <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span>, how many iterations are needed to determine that a searched value is not present when the value is smaller than the first element?","answers":{"a":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span>","b":"1","c":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding=\"application/x-tex\">\\log_2(N) + 1</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mop\"><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.207em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span></span></span></span>","d":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding=\"application/x-tex\">N + 1</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">1</span></span></span></span>"},"correctAnswer":"b","explanations":{"a":"Incorrect. The ordering information allows the search to stop before examining all elements in this case.","b":"Correct. After checking the first element, the algorithm can determine that a smaller target cannot occur later in an ascending sorted array.","c":"Incorrect. The algorithm does not repeatedly halve the search space in this optimized linear-search procedure.","d":"Incorrect. The algorithm does not perform more than <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span> element checks."},"difficulty":"intermediate"},{"question":"5. In an unsorted array, why can a standard linear search require <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span> comparisons in the worst case?","answers":{"a":"Because the array must first be sorted","b":"Because the search examines only the middle element","c":"Because every element is always examined twice","d":"Because the desired value may be the last element or may not exist"},"correctAnswer":"d","explanations":{"a":"Incorrect. Linear search does not require the array to be sorted.","b":"Incorrect. Linear search checks elements sequentially rather than restricting the search to the middle.","c":"Incorrect. A standard linear search does not need to inspect every element twice.","d":"Correct. If the value is at the last position or absent, the search may need to inspect all <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span> elements."},"difficulty":"beginner"},{"question":"6. Consider the unsorted array <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy=\"false\">[</mo><mn>14</mn><mo separator=\"true\">,</mo><mn>3</mn><mo separator=\"true\">,</mo><mn>21</mn><mo separator=\"true\">,</mo><mn>8</mn><mo separator=\"true\">,</mo><mn>5</mn><mo stretchy=\"false\">]</mo></mrow><annotation encoding=\"application/x-tex\">A = [14, 3, 21, 8, 5]</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">[</span><span class=\"mord\">14</span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\">3</span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\">21</span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\">8</span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\">5</span><span class=\"mclose\">]</span></span></span></span>. Using linear search from left to right, how many elements must be examined to find the value 8?","answers":{"a":"2","b":"3","c":"4","d":"5"},"correctAnswer":"c","explanations":{"a":"Incorrect. The value 8 occurs after the first two elements in the given traversal order.","b":"Incorrect. Three elements have been examined only up to the value 21.","c":"Correct. The search examines 14, 3, 21, and then 8, so four elements are examined.","d":"Incorrect. The search stops as soon as 8 is found and does not need to examine 5."},"difficulty":"intermediate"},{"question":"7. Suppose an unsorted array contains <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span> elements and a value is known to occur somewhere in the array. What is the worst-case time complexity of finding its position using linear search?","answers":{"a":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord\">1</span><span class=\"mclose\">)</span></span></span></span>","b":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mi>log</mi><mo>⁡</mo><mi>N</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(\\log N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)</span></span></span></span>","c":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)</span></span></span></span>","d":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(N^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1.0641em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.8141em;\"><span style=\"top:-3.063em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mclose\">)</span></span></span></span>"},"correctAnswer":"c","explanations":{"a":"Incorrect. Knowing that the value exists does not reveal its position.","b":"Incorrect. Linear search does not systematically reduce the remaining candidates by a constant factor.","c":"Correct. The value may occur at the last position, requiring inspection of all <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span></span></span></span> elements.","d":"Incorrect. A single sequential search requires at most a linear number of comparisons."},"difficulty":"beginner"},{"question":"8. An unsorted array is searched for a value using linear search. If the value is found at the first position, what is the time complexity of the search in the best case?","answers":{"a":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord\">1</span><span class=\"mclose\">)</span></span></span></span>","b":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mi>N</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)</span></span></span></span>","c":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><mi>log</mi><mo>⁡</mo><mi>N</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(\\log N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mop\">lo<span style=\"margin-right:0.01389em;\">g</span></span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"mclose\">)</span></span></span></span>","d":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>O</mi><mo stretchy=\"false\">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">O(N^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1.0641em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">N</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.8141em;\"><span style=\"top:-3.063em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mclose\">)</span></span></span></span>"},"correctAnswer":"a","explanations":{"a":"Correct. Only the first element needs to be examined, so the amount of work is constant.","b":"Incorrect. Examining every element is associated with the worst case, not the best case described here.","c":"Incorrect. No logarithmic reduction of the search space occurs in this best-case scenario.","d":"Incorrect. A single successful comparison does not require quadratic work."},"difficulty":"beginner"},{"question":"9. Why can binary search be faster than linear search on a sorted array?","answers":{"a":"Binary search always uses more memory","b":"Binary search removes approximately half of the remaining search space after each comparison","c":"Binary search checks every element simultaneously","d":"Binary search does not require the array to be ordered"},"correctAnswer":"b","explanations":{"a":"Incorrect. Memory usage is not the reason binary search reduces the number of comparisons.","b":"Correct. Binary search uses the ordering of the array to discard roughly half of the remaining candidates after each comparison.","c":"Incorrect. Binary search does not inspect all elements simultaneously.","d":"Incorrect. Standard binary search depends on the array being sorted."},"difficulty":"advanced"}];
+            </script>
+              <script src="../assets/js/assessment_v2.js"></script>  
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] UNSORTED ARRAYS VS BINARY SEARCH" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;UNSORTED ARRAYS VS BINARY SEARCH&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABiFJREFUaEPFmVuMFEUUhv/TM7uwoBGVyG22u7ZnYGG5REETo8RA1BhFIka8ABFf0PCgDxhFEpCLqAlE1OiTiSj4gFGjD0QBETQaEqPRICALSHdPV+8YQQJBA+wuO1PHdMNcWGame2ZWqMfuc/nq1KlT1acJAzhShjFVAUsYdL8G3HjRdA7gHwna5uahLR91dnaeb9QlNWrA1+/o6GjuPnv2DQ30LICKNhk4qLF63PK8g434rejATJhjKa6m9WazOzOZzKlKTmYAcc8QnxEwJwqIAk5STpvpZJwD1eTHjR43PKflhtkZ2+ovVxbaTJiTSVM/gzCYGIebu4fc1nmi80w5J0nDWA7Qq1GACzLMR3pV7pZMJtNdTs/UzelE6msAQ0BYb7vuS6VyZaGTungGhPfygkRYZ7nusv4OEonEDc2xuEfA0JqgATBhieO6b/fXE0IM1pgPECgVvGP+x/bksFDo1JhUguPZI8FMAz0+zzFtSjqd9p8VRlJvew7E79QKHNgEDjrSndRfNyXEGmasLK4KttmeOysU2hdIGm0vA/xKUZh32VLeW6psCrGMmO+uB5qIeEh398P7jx8/m9cP9pGm9vtpmQ9WjHDzUSkPRYJOpVKDuK9vP0Dj8goMfsSR8ot6IKPoJI22XUBpEHitLWUx6heNVC15pmHMItCXBYeKPUZsLlFWVYNQsVg2nU7v82XaW1tHZ4lGhUEztOlEKOQ4A/b5XHZyuc0aWqdNIbYSY3aY00veM/9te3KE/ywlxGpmrKpJP8h5ftCR8qtyeqHQY3XdVNAO5vMskvMGoRWrT9Ke90QlX6HQF6N16Y4OI28Ampn/jatcxx+ZzJ8NQScSiZZBWvzJwAhhJoCKUQhkaoVmnAZoJcC9WowOH02nf6gWl0iRLpQk3ZwOym0n0DVVg10rNAAF7Ig1xedYltUbtpCRoZO6Po1J+z7S6VcHdLCIClusLnfBgED7NVv1ZX8lYGKYwbrSo8Qogxc4Um5pOD1Mo20DgZ+PBFxPTpcYJuBUljDRdd1jdW/EcYnEmKwWSxNR05WADnwo2mB3pV+oGzopxDowlkYGbjDSF9ILpwd1D2mtdB2uuhEv3D+yfwG4/opCB5WVnrZk+v1yfqtCJ3X9TpC2pybggYj0BYcf29KdXwe0WArCuqsCzSxtT4qq0GareStIXXo3JjxGwNSrAh0crMFFq3jYEJ9wpPygkB6mYZwg0PCaAcsp1Hm4RPFtS5eK0LpxvqayVs3DlYIO7r0K8xUhlufRGKNrupLmFQcImsEZBhWaOxq4y5ZyRvXqIcSnYDwaZdkukRkgaGqK32RZ1on+/qt/buliFRFWXxXokonXBJ3S22Yz8darAc2sdjqed1/NddpvnMQUHwPRdTWBD0R6EBbbrltoGJX6D71PJ3V9E0h76kpCMzirNTWNLpfPPkcodNDXi6m9QLGqhE6gwUgzaKMj04sq+QmF9hVrjnYj0IwejmvtjuN4DUEbhjEqztgLoqCXEToagQavsKV8rZqPSJH2DaSEmMGMXZHSpE5oZnzneK7fL8w1DJ1sTU6CltvEwPj/88OWwRYx77Y9b3HD0KYuvqUL/Y5oo85I542TooesrnTF8yE0PUwh5hGj6tfxZTNpEBqKvUE9QyfW9bnV3t5+bV9P7yECxuTBFGOvRn5v5eJgTLzsUhUFmuGCcLJoBiNL/ZT7bVFYiWrrnTSM9QC9WBSmzy2ZnluqI4QYGQcWM/O8Qi+7EjSjB4xtTNqHjuf4HVHO20q1tiZZi/k/j1r8Z8zcRxyfanfZv/dnrJgeYw1jQo6xr+SOfY5j2oRq9VMIIWLA7QSMslz3raDGG8ZMJhoPpR1QmvrFdd2eSoFKGm0rAF5bfM97bCnvKp2c/64idFLXd4C0woWFwMstKV+PthPrk/L/R/aeOfcbCBOKq8uLLCk3llos/0tON+8hUt+U5O1Rao5PjtIcrA+3qOWvDEC78wFlIO1I1wyFTuptC0G8uWSZHrCl3N4oUFT9NiE2a4yFQW6DLUfKsaHQU0aMGHq2pWULM98Bpncdzy35yxXVdf1yftXK9vS8CUVjtBjWHHXdn0qt/Qf/x1JblU8EiAAAAABJRU5ErkJggg==);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="../assets/js/toggleSidebar.js"></script>
+    <script src="../assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-unsorted-arrays-iiith/plugins/svc-rating/index.js"></script><script type="module" src="/exp-unsorted-arrays-iiith/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
